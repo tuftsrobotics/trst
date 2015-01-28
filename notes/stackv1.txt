@@ -1,4 +1,4 @@
-stackvi.txt
+stackv1.txt
 
 Written By Alex Tong January 27 2015
 This document details the first electronics stack for the tufts robotic sail team boat. 
