@@ -3,3 +3,21 @@ stackvi.txt
 Written By Alex Tong January 27 2015
 This document details the first electronics stack for the tufts robotic sail team boat. 
 
+0. Purpose
+    Electronics stack v1 is built to collect data while a human controls the boat via remote control. This data will allow development of a machine learning algorithm for autonomous control of the boat. 
+
+1. Components
+    a. Computing Components
+        i.   Raspberry Pi Model B+
+        ii.  Arduino Uno
+        iii. Can-Bus Arduino Shield
+    b. Sensors
+        i.   Airmar WX200 Model Ultrasonic Wind Sensor
+
+
+2. Configuration
+    Stack v1 will serve to collect data for future use in algorithm development.
+    The data will be passed along through the stack to eventually be stored in an micro-SD card attached to the Raspberry Pi
+    Sensors --> Can-Bus --> Arduino --> Pi
+    
+
