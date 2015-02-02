@@ -1,0 +1,33 @@
+airmar-decoding.txt
+
+Written by Alex Tong February 2 2015
+
+This file depicts the process of decoding messages sent by the Airmar wx200 weather station.
+
+The first thing to notice is the configuration of outputs of the Airmar sensor.
+It has 5 wires, red, black, white, green, and blue. By the Airmar installation
+specs (linked below, and contained in the dropbox) the red and black wires
+supply power to the airmar, and before powering up the sensor we afixed a 0.5A
+fast-blow fuse to one of the terminals.
+
+red -- Vin
+black -- gnd
+white
+green
+blue
+
+by the number of wires we have an NMEA 2000 protocol transmission wire. While
+this protocol is technically compatable with the CAN-BUS arduino shield, the
+transmission is not in human readable form as the NMEA 0183 standard is. This
+makes it extremely hard to extract information from he protocol considering its
+expensive proprietary features. One project, the "canboat" project has worked
+to reverse engineer the NMEA 2k protocol, and as a first attempt we will use
+this project to interpret messages from the sensor. It appears that the standard
+transmission rate of NMEA 2k is 250kbps.
+
+Given this fact, it may be the easiest option to scrap the NMEA2000 protocol,
+and buy a NMEA 0183 standard cord instead, which is what queens robotic sailing
+club had success with. 
+
+Link to airmar wx200 installation guide as of Feb 2015:
+http://www.airmartechnology.com/uploads/installguide/17-461-01.pdf
