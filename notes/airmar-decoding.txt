@@ -1,8 +1,25 @@
 airmar-decoding.txt
 
 Written by Alex Tong February 2 2015
+Updated by Alex Tong February 5 2015
 
-This file depicts the process of decoding messages sent by the Airmar wx200 weather station.
+Update on the Airmar decoding,
+Have yet to power up the sensor, however initial testing suggests that the
+sensor is preconfigured to be either NMEA2000 or NMEA 0183 compatable.
+
+Therefore, the next course of action is to attempt to record the data so that
+we might decipher the NMEA2000 proprietary standard. This will probably require
+a private git-hub database to avoid copyright issues.
+
+Blog link describing the upgrade from NMEA0183 to NMEA2000 standards.
+
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 2 2015
+--------------------------------------------------------------------------------
+
+This file depicts the process of decoding messages sent by the Airmar wx200
+weather station.
 
 The first thing to notice is the configuration of outputs of the Airmar sensor.
 It has 5 wires, red, black, white, green, and blue. By the Airmar installation
@@ -31,3 +48,4 @@ club had success with.
 
 Link to airmar wx200 installation guide as of Feb 2015:
 http://www.airmartechnology.com/uploads/installguide/17-461-01.pdf
+

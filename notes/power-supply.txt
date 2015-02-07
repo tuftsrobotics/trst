@@ -1,0 +1,7 @@
+power-supply.txt
+
+Written by Alex Tong February 5, 2015
+
+The current power supply setup will be a large 12v battery to power the
+sailwinch, sensor, and a regulator down to 5v for the electronics and the
+rudder servo.
