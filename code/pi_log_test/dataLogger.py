@@ -13,14 +13,15 @@ import serial
 from time import strftime
 from datetime import datetime, time
 
-ser = serial.Serial('/dev/ttyACM0', 9600)
+ser = serial.Serial('/dev/ttyACM0', 115200)
 
 startTime = datetime.now()
 try:
     while 1:
         #line is a string read from the serial port, rstrip() removes
         #trailing white spaces on the line.
-        line=ser.readline().rstrip()
+        line=ser.readline()
+        #line=ser.readline().rstrip()
         print(line)
         f=open('tempLog.dat','a')
         print >> f,line
