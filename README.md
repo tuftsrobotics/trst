@@ -37,9 +37,24 @@ Optimal Course Direction (given in degrees from true north)
 
 ### Sailor
 
-Responsible for sail and rudder control given optimal course direction. 
+Responsible for sail and rudder control given optimal course direction,
+using PID controller principles
 
 Input:    
+Optimal Course Direction (relative to true north)
 
 Output:     
-::
+Sail angle (0-90 from centerline)
+Rudder angle (-90 to 90 positive direction attempts right turn)
+
+### Controller
+
+Arduino C code responsible for arduino control of sail and rudder servos
+
+Input:
+Sail angle (format above)
+Rudder angle (format above)
+
+###############################################################################
+END OF FILE
+###############################################################################
