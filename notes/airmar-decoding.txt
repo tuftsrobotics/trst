@@ -1,13 +1,34 @@
 airmar-decoding.txt
 
-Written by Alex Tong February 2 2015
-Updated by Alex Tong February 11 2015
+Created by Alex Tong February 2 2015
+Updated by Alex Tong February 16 2015
 
 This file contains notes on the process of decoding NMEA2000 standard data
 from the airmar wx200 sensor, using an Airmar wx200, an arduino uno, a 
 spark-fun can-bus arduino shield, and a raspberry pi stack.
 
 Eventually this will be used in the 2meter boat as the sensor processing unit
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 16 2015
+--------------------------------------------------------------------------------
+
+I received a set of the draft Airmar PGN's from Dominic. This will enable us,
+along with the canboat project to decode all of the data off of the airmar
+device. However, first is to decode the headers from the canbus shield device.
+The code driver for the spark-fun can-bus arduino shield is written in C++, 
+with what seems like some sort of system library detailing input and output to
+the shield. The shield seems to have at least two "buffers" where the messages
+are kept until accessed by the program. My first approach is to modify the code
+which reads specific messages to also read and output the associated header for
+that data message, either modifying the existing read message function or add
+a similar function which additionally implements a read message & header function.
+
+At this point I don't full understand how the message format PGN's are identified.
+if they are not identified through the header, or are identified in some other
+manner this might be a simpler option. Further research is necessary on the
+identification of message traffic on an NMEA 2000 based system.
+
 
 --------------------------------------------------------------------------------
 Written by Alex Tong February 11 2015
