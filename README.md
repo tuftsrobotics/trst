@@ -1,12 +1,20 @@
 Tufts Robotic Sail Team Code Base
 ===
 
-Created By Alex Tong January  27 2015    
-Updated By Alex Tong February 15 2015
-
 This code base describes the development of a code stack to run a
 semi-autonomous sailboat with the intent of eventual trans-oceanic
 autonomous operation. 
+
+The Team
+---
+Alex Tong    
+http://linkedin.com/in/atong01
+
+Kabir Singh
+
+
+Morgan Gellert
+
 
 Modules
 ---
@@ -54,6 +62,9 @@ Arduino C code responsible for arduino control of sail and rudder servos
 Input:
 Sail angle (format above)
 Rudder angle (format above)
+
+Output:    
+PWM signals to servos (pulse width modulation)
 
 ###############################################################################
 END OF FILE
