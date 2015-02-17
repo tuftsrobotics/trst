@@ -29,6 +29,18 @@ if they are not identified through the header, or are identified in some other
 manner this might be a simpler option. Further research is necessary on the
 identification of message traffic on an NMEA 2000 based system.
 
+Can-Bus Code:
+The can-bus read's messages by updating the public object containing a bunch of
+information about the message can-id etc. Wonder if I can add an item to the
+can-bus object? or reconstruct the necessary parts for the PGN from the existing
+C++ object (probably easier/hackier)
+
+Airmar Connections:
+Currently working off:
+Red     -- +12V
+Black   -- GND
+White   -- CANH
+Blue    -- CANL
 
 --------------------------------------------------------------------------------
 Written by Alex Tong February 11 2015
@@ -101,3 +113,6 @@ club had success with.
 Link to airmar wx200 installation guide as of Feb 2015:
 http://www.airmartechnology.com/uploads/installguide/17-461-01.pdf
 
+###############################################################################
+END OF FILE
+###############################################################################
