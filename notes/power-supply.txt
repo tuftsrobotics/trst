@@ -1,6 +1,6 @@
 power-supply.txt
 
-Created by Alex Tong February 5, 2015
+Created by Alex Tong February 05 2015
 Updated by Alex Tong February 17 2015
 
 --------------------------------------------------------------------------------
