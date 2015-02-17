@@ -66,6 +66,16 @@ Rudder angle (format above)
 Output:    
 PWM signals to servos (pulse width modulation)
 
+### Servo Tester
+
+Arduino C code for servo testing (things do break) 
+
+Input:
+Keyboard?
+
+Output:
+PWM signals to test range of servo settings
+
 ###############################################################################
 END OF FILE
 ###############################################################################

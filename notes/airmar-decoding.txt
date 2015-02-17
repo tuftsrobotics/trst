@@ -41,6 +41,75 @@ Red     -- +12V
 Black   -- GND
 White   -- CANH
 Blue    -- CANL
+Green   -- Nothing -- Have no idea what it does (Shield?) needs more research
+
+The can frame:
+Airmar PGNs all PGN's are numbered in Hex with a 5 Digit hex number, for all
+the airmar PGN's this number can be represented in 17 bits. The format for the
+extended can frame is dictated on the wikipedia:
+    http://en.wikipedia.org/wiki/CAN_bus
+I would suspect that the PGN is represented by the 18 bit identifier B.
+
+CAUTION: Bit Stuffing (may make frames longer than originally supposed check
+         wiki)
+
+Update:
+Got some sort of ID by using getCanId() function, which returns a 32 bit integer
+however can't get it to mean anything even after a bit of bit twiddling.
+Looked at the code of how it is obtained and seems reasonable. Tried 2's
+compliment, but need to try some more tomorrow. The same numbers keep coming
+up over and over suggesting that this is good data, I'm just not interpreting 
+it correctly. Sample out is pasted below.
+
+------------
+BEGIN OUTPUT
+------------
+CAN BUS Shield init ok!
+1323: 136   77  81  8   0   255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+123: 255    255 255 127 255 255 255 127 
+1323: 137   127 123 7   0   255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+223: 159    255 255 255 255 248 255 255 
+1023: 255   240 255 255 255 255 255 255 
+1323: 32    30  240 255 255 255 255 255 
+223: 255    255 255 255 255 255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+1323: 33    255 255 255 255 127 255 255 
+1323: 34    255 127 10  0   176 184 250 
+1323: 35    255 255 241 3   31  114 2   
+523: 32 43  255 255 255 255 255 255 
+523: 33 255 255 255 255 255 255 255 
+523: 34 255 127 255 255 255 255 255 
+523: 35 255 255 127 255 255 255 255 
+923: 255    255 255 255 255 255 255 127 
+523: 36 255 255 255 127 3   252 0   
+523: 37 255 127 255 127 255 255 255 
+523: 38 127 0   255 255 255 255 255 
+423: 32 3   255 255 0   255 255 255 
+1323: 139   77  81  8   0   255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+1323: 140   77  81  8   0   255 255 255 
+123: 255    255 255 127 255 255 255 127 
+1223: 255   255 255 255 127 251 245 255 
+223: 255    255 255 255 255 255 255 255 
+223: 160    10  0   176 184 250 255 255 
+1323: 141   77  81  8   0   255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+1323: 142   77  81  8   0   255 255 255 
+123: 255    255 255 127 255 255 255 127 
+1223: 255   255 255 255 127 251 245 255 
+223: 255    255 255 255 255 255 255 255 
+223: 161    255 255 255 255 248 255 255 
+1323: 143   77  81  8   0   255 255 255 
+1223: 255   255 255 255 127 251 245 255 
+723: 81 193 31  114 255 127 241 3   
+1323: 144   77  81  8   0   255 255 255 
+------------
+END   OUTPUT
+------------
+
+Note: ID's are recorded in Hex
 
 --------------------------------------------------------------------------------
 Written by Alex Tong February 11 2015

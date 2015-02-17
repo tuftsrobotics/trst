@@ -41,6 +41,10 @@ void loop()
     {
         CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
 
+        int id = CAN.getCanId();
+        Serial.print(id);
+        Serial.print(": ");
+        
         for(int i = 0; i<len; i++)    // print the data
         {
             Serial.print(buf[i]);Serial.print("\t");
