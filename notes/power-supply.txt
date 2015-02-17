@@ -1,7 +1,28 @@
 power-supply.txt
 
-Written by Alex Tong February 5, 2015
+Created by Alex Tong February 5, 2015
+Updated by Alex Tong February 17 2015
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 17 2015
+--------------------------------------------------------------------------------
+
+Duncan is now responsible for the power supply. I bought a cheap 10Ah USB power
+pack to power the electroncis stack temporarily/permanently.
+Spec:
+    UNIFUN® 10400mAh External Travel Battery Rugged Power Bank
+    Water/Dirt/ShockproofPortable Charger with Strong LED Flashlight and Dual USB
+Also using a 8AA battery pack temporarily to test air-mar sensor, might be used
+temporarily in initial boat testing before Duncan specs full battery.
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 5 2015
+--------------------------------------------------------------------------------
 
 The current power supply setup will be a large 12v battery to power the
 sailwinch, sensor, and a regulator down to 5v for the electronics and the
 rudder servo.
+
+###############################################################################
+END OF FILE
+###############################################################################
