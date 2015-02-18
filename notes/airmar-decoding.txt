@@ -10,6 +10,14 @@ spark-fun can-bus arduino shield, and a raspberry pi stack.
 Eventually this will be used in the 2meter boat as the sensor processing unit
 
 --------------------------------------------------------------------------------
+Written by Alex Tong February 18 2015
+--------------------------------------------------------------------------------
+
+Tried switching the transmission wires (white and blue) did not get any signal
+(the two orange LED's no longer blink rapidly) it appears I might know what I'm 
+doing/got really lucky in choosing which wires to attach where.
+
+--------------------------------------------------------------------------------
 Written by Alex Tong February 16 2015
 --------------------------------------------------------------------------------
 
