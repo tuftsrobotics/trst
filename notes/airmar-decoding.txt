@@ -17,6 +17,42 @@ Tried switching the transmission wires (white and blue) did not get any signal
 (the two orange LED's no longer blink rapidly) it appears I might know what I'm 
 doing/got really lucky in choosing which wires to attach where.
 
+Relevent code for getting a CAN ID is pasted below. Not exactly sure why, but
+all ID's that I see end with a 0x23 in hex. This seems very strange. PGN's that
+I have seen should have an E or F in the third or fourth slot. ex. 0x0EE00
+but nothing seems to look like that
+
+------------
+BEGIN CODE
+------------
+
+/*********************************************************************************************************
+** Function name:           mcp2515_read_id
+** Descriptions:            read can id
+*********************************************************************************************************/
+void MCP_CAN::mcp2515_read_id( const INT8U mcp_addr, INT8U* ext, INT32U* id )
+{
+    INT8U tbufdata[4];
+    *ext = 0;
+    *id = 0;
+    mcp2515_readRegisterS( mcp_addr, tbufdata, 4 );
+
+    *id = (tbufdata[MCP_SIDH]<<3) + (tbufdata[MCP_SIDL]>>5);
+
+    if ( (tbufdata[MCP_SIDL] & MCP_TXB_EXIDE_M) ==  MCP_TXB_EXIDE_M ) 
+    {
+        /* extended id                  */
+        *id = (*id<<2) + (tbufdata[MCP_SIDL] & 0x03);
+        *id = (*id<<8) + tbufdata[MCP_EID8];
+        *id = (*id<<8) + tbufdata[MCP_EID0];
+        *ext = 1;
+    }
+}
+
+------------
+END   CODE
+------------
+
 --------------------------------------------------------------------------------
 Written by Alex Tong February 16 2015
 --------------------------------------------------------------------------------
