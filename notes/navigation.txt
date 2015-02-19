@@ -1,0 +1,35 @@
+
+MAchine learning algorithm for boat?
+
+Notes from symposium talk:
+
+Machine learning Robotics
+Abdeslam Boularias
+Carnagie Mellon
+
+
+POMDP -- partiallyo observable markov decision process
+	have a belief state... which is continually narrowed down
+	uhoh dimension is exponential to state variables -- planning is polynomial to dimension
+
+Predictive State Representations -- more efficient planning
+	predict a future from small set of futures -- no hidden variables
+Belief State Compression
+	linear function to compress yet minimize difference in output
+Decentralized POMDP
+	multiple robots, what the other robot might do is another belief state
+	plan strategy accordingly
+	policy space compression
+		view as a linear matrx, keep small subset to program, and recompute probabilities on rest of policies
+		by multiplying by constant weights
+
+	possibly: R = wT * observable features
+			  Therefore the policy value is linear as compared to the observable features with weights
+	to find reward function maximize the value of the experts policy (which is not known but simulated and found a similar policy)
+	This implements imitation of the "expert" -- Relative Entropy Inverse Optimal Control
+
+
+
+	Questions:
+
+	Convex problem?

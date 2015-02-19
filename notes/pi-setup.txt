@@ -1,0 +1,23 @@
+pi-setup.txt
+
+Created by Alex Tong February 17 2015
+Updated by Alex Tong February 17 2015
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 17 2015
+--------------------------------------------------------------------------------
+
+One of the main anticipated problems will be programming the pi and arduino
+while the electronics stack is embedded in the boat. This website has a few
+things to say on how to do it:
+    http://carbonstone.blogspot.com/2013/08/setting-up-truly-portable-raspberry-pi.html
+    http://carbonstone.blogspot.com/2014/02/connecting-to-pi-from-laptops-ethernet.html
+Plan is either a wired ethernet connection coming off out of the boat,
+or have a wifi dongle in the boat for either a phone hotspot, or a wifi usb
+transmitter connected to a laptop, this will enable us to get away from a
+keyboard, mouse, and screen necessary without an over the network pi connection.
+
+
+###############################################################################
+END OF FILE
+###############################################################################
