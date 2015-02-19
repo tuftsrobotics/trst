@@ -30,7 +30,7 @@ START_INIT:
         Serial.println("CAN BUS Shield init fail");
         Serial.println("Init CAN BUS Shield again");
         delay(100);
-        goto START_INIT;
+        goto START_INIT;`
     }
 }
 
@@ -42,7 +42,7 @@ void loop()
         CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
 
         int id = CAN.getCanId();
-        Serial.print(id);
+        Serial.print(id, HEX);
         Serial.print(": ");
         
         for(int i = 0; i<len; i++)    // print the data
