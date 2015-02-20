@@ -10,6 +10,22 @@ spark-fun can-bus arduino shield, and a raspberry pi stack.
 Eventually this will be used in the 2meter boat as the sensor processing unit
 
 --------------------------------------------------------------------------------
+Written by Alex Tong February 19 2015
+--------------------------------------------------------------------------------
+
+Found out what a shield wire does, I think it is the green one, it needs to be
+connected to a ground as an electromagnetic shield to reduce interference from
+outside sources. This may??? be the reason why I'm getting wierd data?
+probably not.
+
+Always ends with 0xDC
+The standard Can ID is always 0 for some unknown reason... maybe I'm not reading
+the correct part of the data? why would that be.
+
+Will try with two can-buses and attempt to transmit good messages to decode next
+
+
+--------------------------------------------------------------------------------
 Written by Alex Tong February 18 2015
 --------------------------------------------------------------------------------
 

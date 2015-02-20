@@ -903,7 +903,7 @@ INT32U MCP_CAN::getCanId(void)
 {
     return m_nID;
 } 
-INT32U MCP_CAN::getCanId(void)
+INT32U MCP_CAN::getRawCanId(void)
 {
     return m_nRawID;
 } 
