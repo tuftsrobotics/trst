@@ -10,9 +10,66 @@ spark-fun can-bus arduino shield, and a raspberry pi stack.
 Eventually this will be used in the 2meter boat as the sensor processing unit
 
 --------------------------------------------------------------------------------
-Written by Alex Tong February 19 2015
+Written by Alex Tong February 20 2015
 --------------------------------------------------------------------------------
 
+From arduino forum:
+Written by more than 8 data bytes is sent is a little confusing.  They send it
+7 bytes at a time with the first byte of every message incrementing by 1, which
+is called the sequence identifier.  So to send more than 8 data bytes, you would
+essentially be sending multiple messages, each having the sequence identifier
+one greater than the previous.  Three such messages would give you 21 bytes and
+four would give you 28.
+
+jpjcb66: The first 3 bits of the id is the priority, the next 18 bits are the
+PGN, and the last 8 bits are the source address.
+See the comments in my code above in void loop().
+
+-------------------------------------------------------------------------------
+SUCCESS!!!!!
+
+Output code from arduino serial:
+
+PGM    RAW       ID       DATA (8 bytes)
+1F113: 4F891323: 9F11323: 23    94  56  FE  FF  FF  FF  FF  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1F113: 4F891323: 9F11323: 24    F5  82  FD  FF  FF  FF  FF  
+1F801: 4FC80123: 9F80123: FF    FF  FF  7F  FF  FF  FF  7F  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1F802: 4FC80223: 9F80223: FF    FF  FF  FF  FF  FF  FF  FF  
+1FD02: 4FE90223: 9FD0223: DD    FF  FF  FF  FF  F8  FF  FF  
+1F113: 4F891323: 9F11323: 25    94  56  FE  FF  FF  FF  FF  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1FD07: AFE90723: 15FD0723: 6F   C1  55  73  FF  7F  F1  3   
+1F113: 4F891323: 9F11323: 26    61  2C  FF  FF  FF  FF  FF  
+1F801: 4FC80123: 9F80123: FF    FF  FF  7F  FF  FF  FF  7F  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1F802: 4FC80223: 9F80223: FF    FF  FF  FF  FF  FF  FF  FF  
+1F113: 4F891323: 9F11323: 27    61  2C  FF  FF  FF  FF  FF  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1FD02: 4FE90223: 9FD0223: DE    0   0   4B  1   FA  FF  FF  
+1F113: 4F891323: 9F11323: 28    61  2C  FF  FF  FF  FF  FF  
+1F801: 4FC80123: 9F80123: FF    FF  FF  7F  FF  FF  FF  7F  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1F802: 4FC80223: 9F80223: FF    FF  FF  FF  FF  FF  FF  FF  
+1F113: 4F891323: 9F11323: 29    61  2C  FF  FF  FF  FF  FF  
+1F112: 4F891223: 9F11223: FF    FF  FF  FF  7F  FB  F5  FF  
+1FD02: 4FE90223: 9FD0223: DF    FF  FF  FF  FF  F8  FF  FF  
+1F010: 6F881023: DF01023: FF    F0  FF  FF  FF  FF  FF  FF  
+1F119: 6F891923: DF11923: B7    FF  7F  FF  7F  FF  7F  FF  
+
+The problem was in arduino integer representations as 16 bit integers.
+However, for some reason when you take the complement with ~, they turn into
+32 bit integers, so for a long while I was tricked into thinking they were the
+fairly standard length of 32bits. This mean't that the PGN was always cut off of
+the can message ID.
+
+The first line is a correctly formatted pgn for rate of turn (which turns out
+as a bad value because the sensor is booting... but that's besides the point)
+
+--------------------------------------------------------------------------------
+Written by Alex Tong February 19 2015
+--------------------------------------------------------------------------------
 Found out what a shield wire does, I think it is the green one, it needs to be
 connected to a ground as an electromagnetic shield to reduce interference from
 outside sources. This may??? be the reason why I'm getting wierd data?
