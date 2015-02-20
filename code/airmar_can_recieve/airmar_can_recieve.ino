@@ -41,8 +41,11 @@ void loop()
     {
         CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
 
-        int id = CAN.getCanId();
-        int rawid = CAN.getRawCanId();
+        long id = CAN.getCanId();
+        long pgn = ((id << 6) >> 14);
+        long rawid = CAN.getRawCanId();
+        Serial.print(pgn, HEX);
+        Serial.print(": ");
         Serial.print(rawid, HEX);
         Serial.print(": ");
         Serial.print(id, HEX);
@@ -50,7 +53,7 @@ void loop()
         
         for(int i = 0; i<len; i++)    // print the data
         {
-            Serial.print(buf[i], HEX);Serial.print(" ");
+            Serial.print(buf[i], HEX);Serial.print("\t");
         }
         Serial.println();
     }
