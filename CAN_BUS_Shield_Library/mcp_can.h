@@ -35,6 +35,7 @@ class MCP_CAN
                                                                         /* either extended (the 29 LSB) */
                                                                         /* or standard (the 11 LSB)     */
     INT32U  m_nID;                                                      /* can id                       */
+    INT32U  m_nRawID;
     INT8U   m_nDlc;                                                     /* data length:                 */
     INT8U   m_nDta[MAX_CHAR_IN_MESSAGE];                            	/* data                         */
     INT8U   m_nRtr;                                                     /* rtr                          */
@@ -107,6 +108,7 @@ public:
     INT8U checkReceive(void);                                       /* if something received        */
     INT8U checkError(void);                                         /* if something error           */
     INT32U getCanId(void);                                          /* get can id when receive      */
+    INT32U getRawCanId(void);                                          /* get can id when receive      */
     INT8U isRemoteRequest(void);                                    /* get RR flag when receive     */
 };
 

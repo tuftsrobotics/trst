@@ -448,6 +448,11 @@ void MCP_CAN::mcp2515_read_id( const INT8U mcp_addr, INT8U* ext, INT32U* id )
         *id = (*id<<8) + tbufdata[MCP_EID8];
         *id = (*id<<8) + tbufdata[MCP_EID0];
         *ext = 1;
+
+        m_nRawID = (tbufdata[0]);
+        m_nRawID = tbufdata[1] + (m_nRawID << 8);
+        m_nRawID = tbufdata[2] + (m_nRawID << 8);
+        m_nRawID = tbufdata[3] + (m_nRawID << 8);
     }
 }
 
@@ -897,6 +902,10 @@ INT8U MCP_CAN::checkError(void)
 INT32U MCP_CAN::getCanId(void)
 {
     return m_nID;
+} 
+INT32U MCP_CAN::getCanId(void)
+{
+    return m_nRawID;
 } 
 
 /*********************************************************************************************************
