@@ -20,8 +20,8 @@ try:
     while 1:
         #line is a string read from the serial port, rstrip() removes
         #trailing white spaces on the line.
-        line=ser.readline()
-        #line=ser.readline().rstrip()
+        #line=ser.readline()
+        line=ser.readline().rstrip()
         print(line)
         f=open('tempLog.dat','a')
         print >> f,line
