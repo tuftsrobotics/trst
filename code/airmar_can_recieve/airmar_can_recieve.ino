@@ -43,17 +43,12 @@ void loop()
 
         long id = CAN.getCanId();
         long pgn = ((id << 6) >> 14);
-        long rawid = CAN.getRawCanId();
+        Serial.print("<0x");
         Serial.print(pgn, HEX);
-        Serial.print(": ");
-        Serial.print(rawid, HEX);
-        Serial.print(": ");
-        Serial.print(id, HEX);
-        Serial.print(": ");
-        
+        Serial.print("> [8] ");
         for(int i = 0; i<len; i++)    // print the data
         {
-            Serial.print(buf[i], HEX);Serial.print("\t");
+            Serial.print(buf[i], HEX);Serial.print(" ");
         }
         Serial.println();
     }

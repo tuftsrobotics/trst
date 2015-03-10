@@ -25,6 +25,8 @@ Modules
 Responsible for parsing data from the Airmar WX200 maring weather station from
 the NMEA 2000 standard to a CSV (comma separated value) datafile.  
 
+see trst/notes/airmar-decoding.txt for more current work
+
 Input:       
 NMEA 2000 PGN data over arduino serial input (usb port)
 
@@ -76,6 +78,11 @@ Keyboard?
 
 Output:
 PWM signals to test range of servo settings
+
+### Simulator
+
+Machine learning project (I hope) to reverse engineer inputs and outputs from
+the boat during a real life example.
 
 ###############################################################################
 END OF FILE
