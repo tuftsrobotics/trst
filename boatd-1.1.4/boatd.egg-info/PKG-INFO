@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: boatd
+Version: 1.1.4
+Summary: Experimental daemon to control an autonomous sailing robot
+Home-page: https://github.com/boatd/boatd
+Author: Louis Taylor
+Author-email: kragniz@gmail.com
+License: LGPL
+Description: UNKNOWN
+Keywords: boat sailing wrapper rest
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: PyYAML
