@@ -1,13 +1,26 @@
 airmar-decoding.txt
 
 Created by Alex Tong February 2 2015
-Updated by Alex Tong February 16 2015
+Updated by Alex Tong May 5 2015
 
 This file contains notes on the process of decoding NMEA2000 standard data
 from the airmar wx200 sensor, using an Airmar wx200, an arduino uno, a 
 spark-fun can-bus arduino shield, and a raspberry pi stack.
 
 Eventually this will be used in the 2meter boat as the sensor processing unit
+
+--------------------------------------------------------------------------------
+Written by Alex Tong May 5 2015
+--------------------------------------------------------------------------------
+
+Formatted the output into canboat readable format then ran the first few lines
+converted by hand through the candump2analyzer program, then used the analyzer
+to analyze the pgns. This was successful in that I was able to read specific
+PGN data through the canboat/analyzer program.
+
+Next Steps:
+Auto conversion to canboat format
+understanding analyzer and conversion to boatd format
 
 --------------------------------------------------------------------------------
 Written by Alex Tong February 20 2015
