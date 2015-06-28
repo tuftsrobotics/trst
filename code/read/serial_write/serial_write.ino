@@ -47,6 +47,9 @@ void loop()
         Serial.print(" ");
         for(int i = 0; i<len; i++)    // print the data
         {
+	    if (buf[i] <= 0xF) {
+		Serial.print("0");
+            }
             Serial.print(buf[i], HEX);
         }
         Serial.println();
