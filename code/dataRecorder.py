@@ -10,6 +10,6 @@ Arduino must be connected on the port specified as the serial port.
 
 import serial
 ser = serial.Serial('/dev/ttyACM0', 115200)
-
-    line=ser.readline().rstrip()
-    print(line)
+while 1:
+	line=ser.readline().rstrip()
+	print(line)
