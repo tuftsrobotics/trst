@@ -4,4 +4,6 @@
 #
 # runs datalogger program along with double output program with threads
 
+import threading
+
 
