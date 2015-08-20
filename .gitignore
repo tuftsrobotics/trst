@@ -1,4 +1,5 @@
 rel/
 .*.swp
+*.pyc
 
 AIRMAR_PGNs.pdf
