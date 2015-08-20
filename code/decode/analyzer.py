@@ -2,8 +2,11 @@
 # creates a static class Analyzer which keeps the most recently updated 
 # data from the wind sensor in an acceptable format
 #
-# Michael Caughron
-# 20150-06-28
+# Author: Michael Caughron
+# Editor: Alex Tong
+# Created: 2015-06-28
+# Modified: 2015-8-17
+
 #import serial
 from time import strftime
 from datetime import datetime, time
@@ -121,7 +124,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-
-
-
-

@@ -1,0 +1,22 @@
+hardware.txt
+
+Created by Alex Tong August 19 2015
+Updated by Alex Tong August 19 2015
+
+--------------------------------------------------------------------------------
+Written by Alex Tong August 19 2015
+--------------------------------------------------------------------------------
+
+Today was the first day we worked on the boat in a while, with great success.
+We installed a mount on the bow of the boat which we will mount the Airmar sensor
+on top of. The mount is a 1"-14 UNS standard marine antenna mount, which fits!
+
+We had alot of trouble getting things to stick, we stuck screws up through the 
+bow, and fished them through with yarn, then used a conbination of silicone and
+5200 to secure the mount. We ran into problems with one of the screws where we
+accidently crushed the first few threads, we then had to fish through another 
+smaller screw. 
+
+###############################################################################
+END OF FILE
+###############################################################################
