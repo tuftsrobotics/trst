@@ -1,7 +1,29 @@
 pi-setup.txt
 
 Created by Alex Tong February 17 2015
-Updated by Alex Tong February 17 2015
+Updated by Alex Tong August 23 2015
+
+--------------------------------------------------------------------------------
+Written by Alex Tong August 23 2015
+--------------------------------------------------------------------------------
+
+Was able to connect to the raspberry pi under wifi of host via internet sharing
+however this route only works when the host computer has an internet conection.
+This was tested on the flight from Boston to Seattle. However, it may be possible
+to route from a phone, to laptop, to raspberry pi, although this seems overly
+complicated. Perhaps internet sharing with the phone would allow both raspberry
+pi and computer on phone network. 
+
+Additional reasearch needed in these fields:
+    raspberry pi wifi to phone network
+    portable wifi routers
+    raspberry pi dhcp host
+
+for the purpose of connecting to the boat either over wire or wirelessly using
+a dev machine. The optimal case would be wireless connection from the dev machine
+to the raspberry pi in the absence of other network availability. This would
+obviously be the most flexible solution. perhaps if the raspberry pi could act
+as a dhcp host this would be the most flexible solution
 
 --------------------------------------------------------------------------------
 Written by Alex Tong February 17 2015
