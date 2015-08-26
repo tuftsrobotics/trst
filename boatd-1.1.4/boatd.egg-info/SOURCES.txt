@@ -2,6 +2,7 @@ MANIFEST.in
 boatd-config.json.example
 boatd-config.yaml.example
 boatd-start
+setup.cfg
 setup.py
 boatd/__init__.py
 boatd/api.py

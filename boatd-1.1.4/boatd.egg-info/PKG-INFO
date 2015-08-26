@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: boatd
-Version: 1.1.4
+Version: 1.1
 Summary: Experimental daemon to control an autonomous sailing robot
 Home-page: https://github.com/boatd/boatd
 Author: Louis Taylor

@@ -1,0 +1,55 @@
+
+    '''
+    def SET_attitude():
+        SID = 
+        yaw = 
+        pitch = 
+        roll = 
+
+    def SET_cog_sog_rapid_update():
+         SID = 
+         cog_reference = 
+         cog = 
+         sog = 
+
+     def SET_GNSS_position_data():
+         SID = 
+         position_date = 
+         position_time = 
+         latitude = 
+         longitude = 
+         type_of_system = 
+         GNSS_method = 
+         integrity = 
+         num_SVs = 
+         HDOP = 
+         PDOP = 
+         geoidal_separation = 
+         num_reference_stations = 
+         reference_station_type = 
+         reference_station_id = 
+         age_of_DGNSS_connection = 
+
+     def SET_position_rapid_update():
+         latitude = 
+         longitude = 
+
+     def SET_system_time():
+         SID = 
+         source = 
+         date = 
+         time = 
+
+     def SET_vessel_heading():
+         SID = 
+         heading_sensor_reading = 
+         deviation = 
+         variation = 
+         heading_sensor_reference = 
+
+     def SET_wind_data():
+         SID = 
+         wind_speed = 
+         wind_direction = 
+         wind_reference = 
+    '''
