@@ -7,14 +7,9 @@
 # Created: 2015-06-28
 # Modified: 2015-8-17
 
-#import serial
-from time import strftime
-from datetime import datetime, time
 from decoders import *
 
-#ser = serial.Serial('/dev/ttyACM0', 115200)
 
-startTime = datetime.now()
 
 def get_bytes(data_str, width):
     """ Gets the bytes of a 64 bit integer in big endian format
@@ -69,8 +64,8 @@ class Analyzer(object):
         self.recents  = []
         self.attitude = {"SID" : 0, "yaw" : 0}
         self.cog_sog_rapid_update = {}
-        self.GNSS_position_data = {}
+        self.gnss_position = {}
         self.position_rapid_update = {}
-        self.system_time = {}
+        self.sys_time = {}
         self.vessel_heading = {}
-        self.wind_data = {}
+        self.wind = {}
