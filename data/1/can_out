@@ -1,0 +1,158 @@
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":62,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:44.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":63,"COG Reference":"True","COG":34.4,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":27,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":63,"Date":"2015.08.20", "Time": "23:39:44.06000","Latitude":42.4313483,"Longitude":-71.1472116,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":28,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":29,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":64,"COG Reference":"True","COG":22.0,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":32,"Wind Speed":0.30,"Wind Angle":241.1,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":30,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313500,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":31,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":65,"COG Reference":"True","COG":22.3,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":33,"Wind Speed":0.25,"Wind Angle":297.5,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":32,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313500,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":33,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":66,"COG Reference":"True","COG":50.7,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":34,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":34,"Wind Speed":0.20,"Wind Angle":227.4,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313500,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":35,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":67,"COG Reference":"True","COG":53.3,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":36,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":35,"Wind Speed":0.20,"Wind Angle":292.0,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":67,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:45.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":68,"COG Reference":"True","COG":57.1,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":37,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":68,"Date":"2015.08.20", "Time": "23:39:45.06000","Latitude":42.4313500,"Longitude":-71.1472116,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":38,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313500,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":39,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":69,"COG Reference":"True","COG":47.9,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":36,"Wind Speed":0.20,"Wind Angle":227.2,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":40,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313500,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":41,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":70,"COG Reference":"True","COG":30.1,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":37,"Wind Speed":0.15,"Wind Angle":299.2,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":42,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":43,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":71,"COG Reference":"True","COG":66.5,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":44,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":38,"Wind Speed":0.15,"Wind Angle":219.3,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":45,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":72,"COG Reference":"True","COG":56.2,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":46,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":39,"Wind Speed":0.20,"Wind Angle":285.7,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":72,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:46.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":73,"COG Reference":"True","COG":62.5,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":47,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":73,"Date":"2015.08.20", "Time": "23:39:46.06000","Latitude":42.4313483,"Longitude":-71.1472116,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":48,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":49,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":74,"COG Reference":"True","COG":38.6,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":40,"Wind Speed":0.15,"Wind Angle":230.6,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":50,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":51,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":75,"COG Reference":"True","COG":13.5,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":41,"Wind Speed":0.15,"Wind Angle":246.1,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":52,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":53,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":76,"COG Reference":"True","COG":37.5,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":54,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":42,"Wind Speed":0.15,"Wind Angle":149.7,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472116}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":55,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":77,"COG Reference":"True","COG":73.4,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":56,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":43,"Wind Speed":0.20,"Wind Angle":201.8,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":77,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:47.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":78,"COG Reference":"True","COG":70.1,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":57,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":78,"Date":"2015.08.20", "Time": "23:39:47.06000","Latitude":42.4313483,"Longitude":-71.1472116,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":58,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":59,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":79,"COG Reference":"True","COG":84.8,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":44,"Wind Speed":0.20,"Wind Angle":150.7,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":60,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":61,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":80,"COG Reference":"True","COG":79.2,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":45,"Wind Speed":0.10,"Wind Angle":250.5,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":62,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":63,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":81,"COG Reference":"True","COG":86.6,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":64,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":46,"Wind Speed":0.00,"Wind Angle":1.9,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":65,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":82,"COG Reference":"True","COG":83.9,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":66,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":47,"Wind Speed":0.10,"Wind Angle":257.9,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":82,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:48.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":83,"COG Reference":"True","COG":102.0,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":67,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":83,"Date":"2015.08.20", "Time": "23:39:48.06000","Latitude":42.4313483,"Longitude":-71.1472133,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":68,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":69,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":84,"COG Reference":"True","COG":118.8,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":48,"Wind Speed":0.10,"Wind Angle":180.5,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":70,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":71,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":85,"COG Reference":"True","COG":122.2,"SOG":0.00}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":49,"Wind Speed":0.15,"Wind Angle":217.2,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":72,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":73,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":86,"COG Reference":"True","COG":97.9,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":74,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":50,"Wind Speed":0.15,"Wind Angle":121.4,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":75,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":87,"COG Reference":"True","COG":82.6,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":76,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":51,"Wind Speed":0.10,"Wind Angle":184.2,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":87,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:49.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":88,"COG Reference":"True","COG":73.3,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":77,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":88,"Date":"2015.08.20", "Time": "23:39:49.06000","Latitude":42.4313483,"Longitude":-71.1472133,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":8,"HDOP":1.10,"PDOP":1.70,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":78,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":79,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":89,"COG Reference":"True","COG":66.0,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":52,"Wind Speed":0.10,"Wind Angle":90.7,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":80,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":81,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":90,"COG Reference":"True","COG":69.7,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":53,"Wind Speed":0.25,"Wind Angle":128.9,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":82,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":83,"Heading":80.4,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":91,"COG Reference":"True","COG":55.4,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":84,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":54,"Wind Speed":0.20,"Wind Angle":69.6,"Reference":"Apparent"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":85,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":92,"COG Reference":"True","COG":51.6,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":86,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":130306,"description":"Wind Data","fields":{"SID":55,"Wind Speed":0.15,"Wind Angle":132.8,"Reference":"True (ground referenced to North)"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":126992,"description":"System Time","fields":{"SID":92,"Source":"GPS","Date":"2015.08.20", "Time": "23:39:50.06000"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":93,"COG Reference":"True","COG":45.9,"SOG":0.05}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":87,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129029,"description":"GNSS Position Data","fields":{"SID":93,"Date":"2015.08.20", "Time": "23:39:50.06000","Latitude":42.4313483,"Longitude":-71.1472133,"GNSS type":"GPS+SBAS/WAAS","Method":"GNSS fix","Integrity":"No integrity checking","Number of SVs":7,"HDOP":1.40,"PDOP":2.40,"Geoidal Separation":-31.10,"Reference Station ID":15}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":88,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129025,"description":"Position, Rapid Update","fields":{"Latitude":42.4313483,"Longitude":-71.1472133}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":127250,"description":"Vessel Heading","fields":{"SID":89,"Heading":80.3,"Deviation":0.0,"Variation":-14.8,"Reference":"Magnetic"}}
+{"timestamp":"0","prio":0,"src":0,"dst":0,"pgn":129026,"description":"COG & SOG, Rapid Update","fields":{"SID":94,"COG Reference":"True","COG":40.5,"SOG":0.05}}

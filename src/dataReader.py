@@ -12,7 +12,7 @@ where pgn is 5 hex dgits and data is 16 hex digits
 """
 
 #import numpy as np
-import csv
+from pgns import Pgns
 
 def hex_to_int(h):
     """ converts hex string (no leading characters) to integer """
@@ -71,9 +71,10 @@ def line_to_csv(line):
     return s
 
 if __name__ == '__main__':
-    good_pgns = set([129029])
+    p = Pgns()
+    good_pgns = p.valid_set
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../../data/1/feed', to_can_dump, filt) #GNSS Position Data
+    data = execute('../data/1/feed', to_can_dump, filt) #GNSS Position Data
     for d in data[-200:]:
         print line_to_csv(d)
 #    print data
