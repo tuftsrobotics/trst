@@ -18,12 +18,12 @@ def hex_to_int(h):
     """ converts hex string (no leading characters) to integer """
     return int(h, base = 16)
 
-def to_list(l):
-    
-    l[1] = hex_to_int(l[1])
-    return l
-
 def to_can_dump(line):
+    """ formats data into analyzer input data
+
+    Format is as follows: [0,0,pgn(base 10),0,0,8,FF,FF,FF,FF,FF,FF,FF,FF] note
+    that the F chars indicate hex data with comma separated bytes
+    """
     pgn, body = line
     pgn = hex_to_int(pgn)
     assert(len(body) == 16)
@@ -43,7 +43,6 @@ def execute(fp, fun, filt = None):
             as an argument. Positive return is interpreted as good, else pgn
             is discarded
     """
-
     data = []
     with open(fp) as f:
         for line in f:
@@ -65,6 +64,7 @@ def pgn_is_good(pgn, good_pgns):
     return hex_to_int(pgn) in good_pgns
 
 def line_to_csv(line):
+    """ converts python list to csv string"""
     s = str(line[0])
     for l in line[1:]:
         s += ',' + str(l)
@@ -73,10 +73,10 @@ def line_to_csv(line):
 if __name__ == '__main__':
     p = Pgns()
     good_pgns = p.valid_set
+    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
     data = execute('../data/1/feed', to_can_dump, filt) #GNSS Position Data
     for d in data[-200:]:
         print line_to_csv(d)
-#    print data
     
 
