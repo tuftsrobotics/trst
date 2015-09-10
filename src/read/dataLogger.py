@@ -10,21 +10,24 @@ Arduino must be connected on the port specified as the serial port.
 '''
 
 import serial
-from time import strftime
-from datetime import datetime, time
+import time
 
 ser = serial.Serial('/dev/ttyACM0', 115200)
 
-startTime = datetime.now()
-try:
-    while 1:
-        #line is a string read from the serial port, rstrip() removes
-        #trailing white spaces on the line.
-        #line=ser.readline()
-        line=ser.readline().rstrip()
-        print(line)
-        f=open('tempLog.dat','a')
-        print >> f,line
-        f.close()
-except KeyboardInterrupt:
-    print "\nINTERUPT PROGRAM HALT"
+def main():
+    try:
+        while 1:
+            #line is a string read from the serial port, rstrip() removes
+            #trailing white spaces on the line.
+            #line=ser.readline()
+            line=ser.readline().rstrip()
+            print(line)
+            f=open('tempLog.dat','a')
+            print >> f,line
+            f.close()
+    except KeyboardInterrupt:
+        print "\nINTERUPT PROGRAM HALT"
+
+
+if __name__ == '__main__':
+    main()
