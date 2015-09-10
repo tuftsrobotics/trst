@@ -14,13 +14,17 @@ import time
 
 ser = serial.Serial('/dev/ttyACM0', 115200)
 
-def main():
+
+
+def main(track_time = True):
     try:
         while 1:
             #line is a string read from the serial port, rstrip() removes
             #trailing white spaces on the line.
             #line=ser.readline()
             line=ser.readline().rstrip()
+            if track_time:
+                line = time.clock() + " " + line
             print(line)
             f=open('tempLog.dat','a')
             print >> f,line
