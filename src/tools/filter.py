@@ -2,11 +2,20 @@
 #pgn types
 
 import argparse
+import subprocess
+if __name__ == '__main__':
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('regex', help='regex to grep')
+    parser.add_argument('file', help='datafile to grep')
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser()
-parser.add_argument('string-to-grep', help='regex to grep')
-parser.add_argument('file', help='datafile to grep')
-parser.parse_args()
+    proc = subprocess.Popen(['egrep', args.regex, args.file],
+                            stdin = subprocess.PIPE,
+                            stdout = subprocess.PIPE,
+                            stderr = subprocess.PIPE)
+    stdout_val, stderr_val = proc.communicate('')
+    print stdout_val
 
 
 
