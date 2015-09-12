@@ -13,6 +13,8 @@ where pgn is 5 hex dgits and data is 16 hex digits
 
 #import numpy as np
 from pgns import Pgns
+import time
+import subprocess
 
 def hex_to_int(h):
     """ converts hex string (no leading characters) to integer """
@@ -28,11 +30,26 @@ def to_can_dump(line):
     pgn = hex_to_int(pgn)
     assert(len(body) == 16)
     body = [body[i:i+2] for i in range(0, len(body), 2)]
-    line = [0,0, pgn, 0,0, 8]
+    line = [time.clock(),0, pgn, 0,0, 8]
     line.extend(body)
     return line
 
-def execute(fp, fun, filt = None):
+def to_can_dump_with_time(line):
+    """ formats data into analyzer input data
+
+    Format is as follows: [0,0,pgn(base 10),0,0,8,FF,FF,FF,FF,FF,FF,FF,FF] note
+    that the F chars indicate hex data with comma separated bytes
+    """
+    time_read, pgn, body = line
+    pgn = hex_to_int(pgn)
+    assert(len(body) == 16)
+    body = [body[i:i+2] for i in range(0, len(body), 2)]
+    line = [time_read, 0, pgn, 0,0, 8]
+    line.extend(body)
+    return line
+
+
+def execute(fp, fun, filt = None, has_time = True):
     """ executes a function on a file, with an optional filter step
 
     Args:
@@ -43,16 +60,24 @@ def execute(fp, fun, filt = None):
             as an argument. Positive return is interpreted as good, else pgn
             is discarded
     """
+    #TODO fix this ugliness
     data = []
     with open(fp) as f:
         for line in f:
             l = line.rstrip().split()
-            if not len(l) == 2:
-                assert(False)
-            pgn, body = l
+            if has_time:
+                assert len(l) == 3
+                time_read, pgn, body = l
+            else:
+                if not len(l) == 2:
+                    assert(False)
+                pgn, body = l
             if filt is not None and not filt(pgn):
                 continue
-            data.append(fun((pgn, body)))
+            if has_time:
+                data.append(fun((time_read, pgn, body)))
+            else:
+                data.append(fun((pgn, body)))
     return data
 
 def pgn_is_good(pgn, good_pgns):
@@ -73,10 +98,18 @@ def line_to_csv(line):
 if __name__ == '__main__':
     p = Pgns()
     good_pgns = p.valid_set
-    good_pgns = set([129029])
+#    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
     data = execute('../data/1/feed', to_can_dump, filt) #GNSS Position Data
-    for d in data[-200:]:
-        print line_to_csv(d)
-    
+    for d in data[1:]:          # This is very strange... but the first line is malformed
+        s =  line_to_csv(d)
+        print s
+        proc = subprocess.Popen(['analyzer', '-json'],
+                                stdin = subprocess.PIPE,
+                                stdout = subprocess.PIPE,
+                                stderr = subprocess.PIPE)
+        stdout_val, stderr_val = proc.communicate(s)
+        print stdout_val
+        
+
 
