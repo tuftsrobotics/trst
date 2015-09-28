@@ -37,7 +37,7 @@ def to_can_dump(line):
 def to_can_dump_with_time(line):
     """ formats data into analyzer input data
 
-    Format is as follows: [0,0,pgn(base 10),0,0,8,FF,FF,FF,FF,FF,FF,FF,FF] note
+    Format is as follows: [time,0,pgn(base 10),0,0,8,FF,FF,FF,FF,FF,FF,FF,FF] note
     that the F chars indicate hex data with comma separated bytes
     """
     time_read, pgn, body = line
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     good_pgns = p.valid_set
 #    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../data/1/feed', to_can_dump, filt) #GNSS Position Data
+    data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
     for d in data[1:]:          # This is very strange... but the first line is malformed
         s =  line_to_csv(d)
         print s

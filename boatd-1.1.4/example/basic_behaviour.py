@@ -7,5 +7,5 @@ for i in range(5):
     boat.rudder(0)
     boat.rudder(-1)
     boat.rudder(3)
-
     boat.sail(0)
+    time.sleep(1)
