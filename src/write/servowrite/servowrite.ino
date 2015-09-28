@@ -1,7 +1,8 @@
 #include <Servo.h>
 
-//Data is sent to the arduino each byte ends with either a 0
-//Signalling a sail control or 1 for a rudder control
+//Data is sent to the arduino each byte starts with either a S
+//Signalling a sail control or R for a rudder control
+//The following 2 bytes are hex 0-256 signaling position
 
 int SAIL_MASK = 0;
 int RUDD_MASK = 1;
