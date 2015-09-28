@@ -10,7 +10,7 @@ Servo rudder;
 
 int readRudder() {
   String input;
-  int angle
+  int angle;
   while (Serial.available() > 0) {
     int inChar = Serial.read();
     if (isDigit(inChar)) {
@@ -28,7 +28,7 @@ int readRudder() {
 
 int readSail() {
   String input;
-  int angle
+  int angle;
   while (Serial.available() > 0) {
     int inChar = Serial.read();
     if (isDigit(inChar)) {
