@@ -11,6 +11,7 @@ Note:
 
 """
 
+from pyserial_driver import *
 from boatstate import BoatState
 
 def control(key, state):
@@ -39,35 +40,26 @@ def control(key, state):
         print "invalid key"
     return state
 
-def transmit_serial(state):
-    """ transmits boat state to arduino using pyserial
+def transmit_serial(state, connection):
+    """ transmits boat state over a connection object
+
+    calls connection.write(state) to write the state over some connection
 
     """
-
-    pass
+    connection.write(state)
 
 def main():
     state = BoatState()
+    connection = SerialConnection(port = '/dev/tty.usbmodem1411')
     try:
         while 1:
             key = raw_input()
             state = control(key, state)
             print state
-            transmit_serial(state)
-    except KeyboardInterrupt:
-        print "\nINTERUPT PROGRAM HALT"
-
-def laptop():
-    state = BoatState()
-    try:
-        while 1:
-            key = raw_input()
-            state = control(key, state)
-            print state
+            transmit_serial(state, connection)
     except KeyboardInterrupt:
         print "\nINTERUPT PROGRAM HALT"
 
 if __name__ == '__main__':
-    #main()
-    laptop()
+    main()
 

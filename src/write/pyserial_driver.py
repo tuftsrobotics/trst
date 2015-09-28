@@ -11,12 +11,11 @@ import serial
 from boatstate import BoatState
 
 def format_to_arduino(state):
-    rudder, sails = state.get_pos
-    return "R " + str(rudder) + "\n" + \
-           "S " + str(sails)
+    rudder, sails = state.get_pos()
+    return str(rudder) + ',' + str(sails) + '\n'
 
 class SerialConnection(object):
-    def __init__(self, port = '/dev/ttyACM0', baudrate = 115200)
+    def __init__(self, port = '/dev/ttyACM0', baudrate = 115200):
         self.default_state = BoatState()
         self.ser = serial.Serial(port, baudrate)
         self.last_state_written = self.default_state
@@ -25,6 +24,7 @@ class SerialConnection(object):
         if state == None:
             state = self.default_state
         assert type(state) == BoatState
+        self.ser.write(format_to_arduino(state).encode())
         
 
 
