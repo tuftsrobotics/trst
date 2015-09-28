@@ -61,6 +61,10 @@ void setup() {
   Serial.begin(115200);
   sails.attach(9);
   rudder.attach(10);
+
+  // rudder and sail defaults
+  rudder.write(180);
+  sails.writeMicroseconds(1800);
 }
 
 void loop() {
