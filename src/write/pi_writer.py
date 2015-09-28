@@ -26,7 +26,7 @@ def control(key, state):
     Returns:
         updated boatstate
     """
-    INCREMENT = 5
+    INCREMENT = 100
     
     if key == 'a':
         state.turn_left()
@@ -50,7 +50,7 @@ def transmit_serial(state, connection):
 
 def main():
     state = BoatState()
-    connection = SerialConnection(port = '/dev/tty.usbmodem1411')
+    connection = SerialConnection()
     try:
         while 1:
             key = raw_input()

@@ -7,9 +7,13 @@ This class holds the servo states of a boat
 
 """
 class BoatState(object):
-    SERVO_LOW = 0
-    SERVO_HIGH = 255
-    SERVO_START = (SERVO_HIGH - SERVO_LOW) / 2
+    R_SERVO_LOW = 0
+    R_SERVO_HIGH = 255
+    R_SERVO_START = (SERVO_HIGH - SERVO_LOW) / 2
+    S_SERVO_LOW = 1100
+    S_SERVO_HIGH = 1800
+    S_SERVO_START = (SERVO_HIGH - SERVO_LOW) / 2
+    
     INCREMENT = 5
     def __init__(self):
         """ inits boatstate, boats should start rudder centered sails eased """
