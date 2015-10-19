@@ -3,3 +3,4 @@ rel/
 *.pyc
 boatd/
 AIRMAR_PGNs.pdf
+server/node_modules/

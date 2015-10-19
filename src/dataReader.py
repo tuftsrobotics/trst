@@ -15,6 +15,9 @@ where pgn is 5 hex dgits and data is 16 hex digits
 from pgns import Pgns
 import time
 import subprocess
+import sys
+import requests
+import json
 
 def hex_to_int(h):
     """ converts hex string (no leading characters) to integer """
@@ -93,7 +96,66 @@ def line_to_csv(line):
     s = str(line[0])
     for l in line[1:]:
         s += ',' + str(l)
-    return s
+
+    return s + '\n'
+
+def analyze(lines, boat = None, port = 2222):
+    """ takes a line and pushes the data to boatd"""
+    if boat is None:
+        print "HALP"
+    s = ''
+    for l in lines:
+        s += line_to_csv(l)
+    print s
+#TODO this opens a new analyzer process for every line, very slow... please fix me
+    proc = subprocess.Popen(['analyzer', '-json'],
+                            stdin = subprocess.PIPE,
+                            stdout = subprocess.PIPE,
+                            stderr = subprocess.PIPE)
+    stdout_val, stderr_val = proc.communicate(s)
+    json_val = stdout_val
+    print json_val
+    try:
+        data = json.loads(json_val)
+        try:
+#            boat.post(json.dumps(data["fields"]))
+            boat.post(data["fields"])
+#            print json.dumps(data["fields"])
+        except KeyError:
+            print "key ERROR:", data
+            pass
+    except ValueError:
+        print "Value ERROR:", json_val
+        pass
+     
+#    boat._post(json_val, '/wind_speed')
+#    boat._post({'value' : 10}, '/wind_speed')
+#    print boat._get('/wind_speed')
+
+
+def log(line):
+    """ takes a line and prints out the json data """
+    s =  line_to_csv(d)
+#TODO this opens a new analyzer process for every line, very slow... please fix me
+    proc = subprocess.Popen(['analyzer', '-json'],
+                            stdin = subprocess.PIPE,
+                            stdout = subprocess.PIPE,
+                            stderr = subprocess.PIPE)
+    stdout_val, stderr_val = proc.communicate(s)
+#        print >> sys.stderr, stdout_val
+    print stdout_val
+
+class Boat(object):
+    def __init__(self):
+        self.url = "http://127.0.0.1:8888/"
+       # self.url = "http://127.0.0.1:5000/"
+
+    def post(self, data):
+
+        requests.post(self.url, data = data)
+
+    def get(self):
+        return requests.get(self.url)
 
 if __name__ == '__main__':
     p = Pgns()
@@ -101,15 +163,12 @@ if __name__ == '__main__':
 #    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
     data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
-    for d in data[1:]:          # This is very strange... but the first line is malformed
-        s =  line_to_csv(d)
-        print s
-        proc = subprocess.Popen(['analyzer', '-json'],
-                                stdin = subprocess.PIPE,
-                                stdout = subprocess.PIPE,
-                                stderr = subprocess.PIPE)
-        stdout_val, stderr_val = proc.communicate(s)
-        print stdout_val
-        
-
-
+    boat = Boat()
+    accum = [data[1]]
+    for d in data[-2000:]:          # This is very strange... but the first line is malformed
+        print d[2], accum[-1][2]
+        if d[2] == accum[-1][2]:
+            accum.append(d)
+        else:
+            analyze(accum, boat)
+            accum = [d]

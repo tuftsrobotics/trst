@@ -12,8 +12,12 @@ def get_wind():
     return 8.42
 
 @driver.wind_speed
-def get_wind_speed():
-    return 25
+def get_wind_speed(wind = 100):
+
+    print type(wind['wind'])
+    print wind['wind']
+
+    return wind['wind']
 
 @driver.position
 def position():
@@ -26,3 +30,4 @@ def rudder(theta):
 @driver.sail
 def sail(theta):
     return theta
+
