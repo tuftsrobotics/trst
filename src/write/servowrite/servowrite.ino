@@ -24,6 +24,7 @@ int lower_bound = 1100;
 bool RC_state = false;
 
 
+
 void setRudder(int pos) {
   if (pos >= lower_bound && pos <= upper_bound) {
       rudder.writeMicroseconds(pos);
