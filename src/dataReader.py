@@ -51,7 +51,6 @@ def to_can_dump_with_time(line):
     line.extend(body)
     return line
 
-
 def execute(fp, fun, filt = None, has_time = True):
     """ executes a function on a file, with an optional filter step
 
@@ -106,7 +105,7 @@ def analyze(lines, boat = None, port = 2222):
     s = ''
     for l in lines:
         s += line_to_csv(l)
-    print s
+#    print s
 #TODO this opens a new analyzer process for every line, very slow... please fix me
     proc = subprocess.Popen(['analyzer', '-json'],
                             stdin = subprocess.PIPE,
@@ -114,12 +113,22 @@ def analyze(lines, boat = None, port = 2222):
                             stderr = subprocess.PIPE)
     stdout_val, stderr_val = proc.communicate(s)
     json_val = stdout_val
-    print json_val
+#    print json_val
     try:
         data = json.loads(json_val)
         try:
 #            boat.post(json.dumps(data["fields"]))
-            boat.post(data["fields"])
+            fields = data["fields"]
+            if data["description"] == "Wind Data":
+                ref = fields["Reference"]
+                if ref == "Apparent":
+                    fields["App Wind Angle"] = fields.pop("Wind Angle")
+                    fields["App Wind Speed"] = fields.pop("Wind Speed")
+                if ref == "True (ground referenced to North)":
+                    fields["True Wind Angle"] = fields.pop("Wind Angle")
+                    fields["True Wind Speed"] = fields.pop("Wind Speed")
+                print fields
+            boat.post(fields)
 #            print json.dumps(data["fields"])
         except KeyError:
             print "key ERROR:", data
@@ -166,7 +175,7 @@ if __name__ == '__main__':
     boat = Boat()
     accum = [data[1]]
     for d in data[-2000:]:          # This is very strange... but the first line is malformed
-        print d[2], accum[-1][2]
+#        print d[2], accum[-1][2]
         if d[2] == accum[-1][2]:
             accum.append(d)
         else:
