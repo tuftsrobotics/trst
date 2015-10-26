@@ -1,37 +1,71 @@
 var express = require('express');
 var _ = require('lodash');
 var bodyParser = require('body-parser');
+var Wind = require('./wind');
+var Position = require('./position')
+var Waypoint = require('./waypoint')
 
 
-var app = express();
+function Application (options) {
+    if (!(instanceof Application)) {
+        return new Aplication(options);
+    }
 
+    this.boat_data = options.boat_data || {};
+    this.Wind = options.Wind || Wind;
+    this.Position = options.Position || Position;
+    this.Waypoint = options.Waypoint || Waypoint;
 
-var boat_data = {};
+    this.app = options.app || express();
+    app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(bodyParser.urlencoded({extended: false}));
+    var api = app.Router();
 
-app.get('/', function(req, res) {
-    res.status(200).json(boat_data);
-    //return boat data
-})
+    this.app.use(api);
+    this.registerAll(options, api);
 
-// req.data is the fields object of the analyzed sensor data
-// may change if we want timestamp
-.post('/', function(req, res) {
-    //change boat data
-    console.log('recieved data');
-    console.log(req.body);
-    boat_data = _.assign(boat_data, req.body);
-    console.log(boat_data);
+    _.bindAll(this,
+        'register',
+        'registerAll',
+        'get',
+        'post',
+        'listen');
+}
+
+module.exports = Application;
+
+Application.prototype.registerAll = function registerAll (options, router) {
+    this.register(router);
+    this.Wind.register(options, router);
+    this.Position.register(options, router);
+    this.Waypoint.register(options, router);
+}
+
+Application.prototype.register = function register (router) {
+    router.route('/')
+        .get(this.get);
+        .post(this.post);
+}
+
+Application.prototype.get = function get (req, res, next) {
+    res.status(200).json(this.boat_data);
+    next();
+}
+
+Application.prototype.post = function post (req, res, next) {
+    this.boat_data = _.assign(boat_data, req.body);
     res.sendStatus(200);
-});
+}
 
 
+Application.prototype.listen = function listen () {
+    var _this = this;
+    this.server = this.app.listen(8888, function() {
+        var host = _this.server.address().address;
+        var port = _this.server.address().port;
 
-var server = app.listen(8888, function() {
-    var host = server.address().address;
-    var port = server.address().port;
+        console.log("Listening at http://%s:%s", host, port);
+    });    
+}
 
-    console.log("Listening at http://%s:%s", host, port);
-});
 
