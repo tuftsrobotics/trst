@@ -1,3 +1,14 @@
+/
+    position/
+        gps
+        heading/
+            gps
+            magnetic
+        speed
+    wind/
+        apparent
+        true
+    waypoint
 
 
 

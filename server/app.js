@@ -5,14 +5,15 @@ var Wind = require('./wind');
 var Position = require('./position')
 var Waypoint = require('./waypoint')
 
-
+var boat_data = {};
 function Application (options) {
     if (!(this instanceof Application)) {
         return new Aplication(options);
     }
 
-    this.boat_data = {};
+    this.boat_data = boat_data;
     options.boat_data = this.boat_data;
+console.log(this.boat_data);
     // TODO: check for boat data in all modules
     this.Wind = Wind(options);
     this.Position = Position(options);
@@ -50,12 +51,14 @@ Application.prototype.register = function register (router) {
 }
 
 Application.prototype.get = function get (req, res, next) {
-    res.status(200).json(this.boat_data);
-    next();
+console.log(boat_data);
+res.status(200).json(boat_data);
 }
 
 Application.prototype.post = function post (req, res, next) {
-    this.boat_data = _.assign(this.boat_data, req.body);
+
+    boat_data = _.assign(boat_data, req.body);
+    console.log(boat_data);
     res.sendStatus(200);
 }
 

@@ -12,6 +12,7 @@ function Wind (options) {
     this.boat_data = options.boat_data;
 
     _.bindAll(this,
+        'getBoth',
         'getApparant',
         'postApparant',
         'getTrue',
