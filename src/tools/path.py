@@ -12,7 +12,7 @@ where pgn is 5 hex dgits and data is 16 hex digits
 """
 
 #import numpy as np
-from pgns import Pgns
+#from pgns import Pgns
 import time
 import subprocess
 import sys
@@ -154,17 +154,31 @@ def log(line):
 #        print >> sys.stderr, stdout_val
     print stdout_val
 
-def gps_to_csv(line):
+def gps_to_csv(lines):
     """ takes a line and prints out the json data """
-    s =  line_to_csv(d)
+    s = ''
+    for l in lines:
+        s += line_to_csv(l)
 #TODO this opens a new analyzer process for every line, very slow... please fix me
     proc = subprocess.Popen(['analyzer', '-json'],
                             stdin = subprocess.PIPE,
                             stdout = subprocess.PIPE,
                             stderr = subprocess.PIPE)
     stdout_val, stderr_val = proc.communicate(s)
-    data = json.loads(stdout_val)
-    print data["fields"]["Latitude"], ",", data["fields"]["Longitude"]
+    string_data = stdout_val.split('\n')
+    data = []
+    for s in string_data:
+        try:
+            data.append(json.loads(s))
+        except ValueError:
+            pass
+#    data = [json.loads(s) for s in stdout_val.split('\n')]
+    print data
+    for line in data:
+        try:
+            print line["fields"]["Latitude"], ",", line["fields"]["Longitude"]
+        except KeyError:
+            pass
     
 class Boat(object):
     def __init__(self):
@@ -179,19 +193,11 @@ class Boat(object):
         return requests.get(self.url)
 
 if __name__ == '__main__':
-    p = Pgns()
-    good_pgns = p.valid_set
-#    good_pgns = set([129029])
+#    p = Pgns()
+#    good_pgns = p.valid_set
+    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
+    data = execute('../../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
+#    data = data[-2000:]
     boat = Boat()
-    accum = [data[1]]
-    for d in data:          # This is very strange... but the first line is malformed
-#        print d[2], accum[-1][2]
-        if d[2] == accum[-1][2]: #if same pgn
-            accum.append(d)
-        else:
-            analyze(accum, boat)
-#            gps_to_csv(accum)
-#            log(accum)
-            accum = [d]
+    gps_to_csv(data)
