@@ -44,7 +44,7 @@ Application.prototype.registerAll = function registerAll (options, router) {
 
 Application.prototype.register = function register (router) {
     router.route('/')
-        .get(this.get);
+        .get(this.get)
         .post(this.post);
 }
 
