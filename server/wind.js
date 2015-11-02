@@ -6,7 +6,7 @@ function Wind (options) {
     }
 
     this.boat_data = options.boat_data;
-    
+
     _.bindAll(this,
         'getApparant',
         'postApparant',
@@ -20,6 +20,7 @@ module.exports = Wind;
 Wind.register = function (options, router) {
     var wind = new Wind(options);
     wind.register(router);
+
 }
 
 Wind.prototype.register =  function register (router) {

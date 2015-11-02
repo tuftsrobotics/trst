@@ -37,9 +37,9 @@ module.exports = Application;
 
 Application.prototype.registerAll = function registerAll (options, router) {
     this.register(router);
-    this.Wind.register(options, router);
-    this.Position.register(options, router);
-    this.Waypoint.register(options, router);
+    Wind.register(options, router);
+    Position.register(options, router);
+    Waypoint.register(options, router);
 }
 
 Application.prototype.register = function register (router) {
