@@ -55,7 +55,7 @@ Application.prototype.get = function get (req, res, next) {
 }
 
 Application.prototype.post = function post (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
 

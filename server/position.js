@@ -72,7 +72,7 @@ Position.prototype.getGPS = function getGPS (req, res, next) {
 }
 
 Position.prototype.postGPS = function postGPS (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
 
@@ -85,7 +85,7 @@ Position.prototype.getHeadingGPS = function getHeadingGPS (req, res, next) {
 }
 
 Position.prototype.postHeadingGPS = function postHeadingGPS (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
 
@@ -98,7 +98,7 @@ Position.prototype.getHeadingMag = function getHeadingMag (req, res, next) {
 }
 
 Position.prototype.postHeadingMag = function postHeadingMag (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
 
@@ -110,6 +110,6 @@ Position.prototype.getSpeed = function getSpeed (res, req, next) {
 }
 
 Position.prototype.postSpeed = function postSpeed (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }

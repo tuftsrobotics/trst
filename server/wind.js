@@ -63,7 +63,7 @@ Wind.prototype.getApparant = function getApparant (req, res, next) {
 }
 
 Wind.prototype.postApparant = function postApparant (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
 
@@ -78,6 +78,6 @@ Wind.prototype.getTrue = function getTrue (req, res, next) {
 }
 
 Wind.prototype.postTrue = function postTrue (req, res, next) {
-    this.boat_data = _.assign(boat_data, req.body);
+    this.boat_data = _.assign(this.boat_data, req.body);
     res.sendStatus(200);
 }
