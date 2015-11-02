@@ -18,9 +18,9 @@ function Application (options) {
     this.Waypoint = options.Waypoint || Waypoint;
 
     this.app = options.app || express();
-    app.use(bodyParser.urlencoded({extended: false}));
+    this.app.use(bodyParser.urlencoded({extended: false}));
 
-    var api = app.Router();
+    var api = express.Router();
 
     this.app.use(api);
     this.registerAll(options, api);
@@ -70,3 +70,6 @@ Application.prototype.listen = function listen () {
 }
 
 
+
+var application = new Application({});
+application.listen();

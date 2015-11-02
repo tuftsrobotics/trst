@@ -2,11 +2,10 @@ var _ = require('lodash');
 
 function Wind (options) {
     if (!(this instanceof Wind)) {
-        return new Wind;
+        return new Wind(options);
     }
 
     _.bindAll(this,
-        'register',
         'getApparant',
         'postApparant',
         'getTrue',
