@@ -6,7 +6,7 @@ function Position (options) {
     }
 
     this.boat_data = options.boat_data;
-    
+
     _.bindAll(this,
         'getAll',
         'getGPS',
@@ -51,6 +51,8 @@ Position.prototype.register =  function register (router) {
 
 Position.prototype.getAll = function getAll (req, res, next) {
     var pos_data = {};
+    pos_data.gps = {};
+    pos_data.mag = {};
     pos_data.gps.lat = this.boat_data["Latitude"];
     pos_data.gps.long = this.boat_data["Longitude"];
     pos_data.gps.heading = this.boat_data["COG"];
@@ -62,6 +64,7 @@ Position.prototype.getAll = function getAll (req, res, next) {
 
 Position.prototype.getGPS = function getGPS (req, res, next) {
     var pos_data = {};
+    pos_data.gps = {};
     pos_data.gps.lat = this.boat_data["Latitude"];
     pos_data.gps.long = this.boat_data["Longitude"];
 
@@ -75,6 +78,7 @@ Position.prototype.postGPS = function postGPS (req, res, next) {
 
 Position.prototype.getHeadingGPS = function getHeadingGPS (req, res, next) {
     var pos_data = {};
+    pos_data.gps = {};
     pos_data.gps.heading = this.boat_data["COG"];
 
     res.status(200).json(pos_data);
@@ -87,6 +91,7 @@ Position.prototype.postHeadingGPS = function postHeadingGPS (req, res, next) {
 
 Position.prototype.getHeadingMag = function getHeadingMag (req, res, next) {
     var pos_data = {};
+    pos_data.mag = {};
     pos_data.mag.heading = this.boat_data["Heading"];
 
     res.status(200).json(pos_data);

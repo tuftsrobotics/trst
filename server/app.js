@@ -10,12 +10,13 @@ function Application (options) {
     if (!(this instanceof Application)) {
         return new Aplication(options);
     }
-    var options = {};
-    this.boat_data = options.boat_data || {};
+
+    this.boat_data = {};
+    options.boat_data = this.boat_data;
     // TODO: check for boat data in all modules
-    this.Wind = options.Wind || Wind(options);
-    this.Position = options.Position || Position(options);
-    this.Waypoint = options.Waypoint || Waypoint(options);
+    this.Wind = Wind(options);
+    this.Position = Position(options);
+    this.Waypoint = Waypoint(options);
 
     this.app = options.app || express();
     this.app.use(bodyParser.urlencoded({extended: false}));

@@ -5,6 +5,10 @@ function Wind (options) {
         return new Wind(options);
     }
 
+    // if(!options.boat_data){
+    //     console.log('no boat data')
+    // }
+
     this.boat_data = options.boat_data;
 
     _.bindAll(this,
@@ -38,6 +42,8 @@ Wind.prototype.register =  function register (router) {
 
 Wind.prototype.getBoth = function getBoth (req, res, next) {
     var wind_data = {};
+    wind_data.apparant = {};
+    wind_data.true =  {};
     wind_data.apparant.angle = this.boat_data["App Wind Angle"];
     wind_data.apparant.speed = this.boat_data["App Wind Speed"];
     wind_data.true.angle = this.boat_data["True Wind Angle"];
@@ -48,6 +54,8 @@ Wind.prototype.getBoth = function getBoth (req, res, next) {
 
 Wind.prototype.getApparant = function getApparant (req, res, next) {
     var wind_data = {};
+    wind_data.apparant = {};
+
     wind_data.apparant.angle = this.boat_data["App Wind Angle"];
     wind_data.apparant.speed = this.boat_data["App Wind Speed"];
 
@@ -61,6 +69,8 @@ Wind.prototype.postApparant = function postApparant (req, res, next) {
 
 Wind.prototype.getTrue = function getTrue (req, res, next) {
     var wind_data = {};
+    wind_data.true = {};
+
     wind_data.true.angle = this.boat_data["True Wind Angle"];
     wind_data.true.speed = this.boat_data["True Wind Speed"];
 
