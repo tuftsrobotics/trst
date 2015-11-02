@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 function Waypoint (options) {
-    if (!(instanceof Waypoint)) {
+    if (!(this instanceof Waypoint)) {
         return new Waypoint;
     }
 
@@ -25,4 +25,15 @@ Waypoint.prototype.register =  function register (router) {
     router.route('/waypoint')
         .get(this.getWaypoint)
         .post(this.postWaypoint);
+}
+
+//TODO: Actual waypoint handling
+
+Waypoint.prototype.getWaypoint = function getWaypoint (req, res, next) {
+    res.status(200).send(this.waypoints[0]);
+}
+
+Waypoint.prototype.postWaypoint = function postWaypoint (req, res, next) {
+    this.waypoints[0] = req.data;
+    res.sendStatus(200);
 }

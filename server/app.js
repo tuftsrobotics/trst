@@ -7,11 +7,12 @@ var Waypoint = require('./waypoint')
 
 
 function Application (options) {
-    if (!(instanceof Application)) {
+    if (!(this instanceof Application)) {
         return new Aplication(options);
     }
 
     this.boat_data = options.boat_data || {};
+    // TODO: check for boat data in all modules
     this.Wind = options.Wind || Wind;
     this.Position = options.Position || Position;
     this.Waypoint = options.Waypoint || Waypoint;
