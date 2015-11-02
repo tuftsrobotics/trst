@@ -2,11 +2,10 @@ var _ = require('lodash');
 
 function Position (options) {
     if (!(this instanceof Position)) {
-        return new Position;
+        return new Position(options);
     }
 
     _.bindAll(this,
-        'register',
         'getAll',
         'getGPS',
         'postGPS',
@@ -15,7 +14,8 @@ function Position (options) {
         'getHeadingMag',
         'postHeadingMag',
         'getSpeed',
-        'postSpeed');
+        'postSpeed'
+    );
 
 }
 
@@ -95,7 +95,7 @@ Position.prototype.postHeadingMag = function postHeadingMag (req, res, next) {
     res.sendStatus(200);
 }
 
-Position.prototype.postSpeed = function postSpeed (res, req, next) {
+Position.prototype.getSpeed = function getSpeed (res, req, next) {
     var pos_data = {};
     pos_data.speed = this.boat_data["SOG"];
 

@@ -2,13 +2,12 @@ var _ = require('lodash');
 
 function Waypoint (options) {
     if (!(this instanceof Waypoint)) {
-        return new Waypoint;
+        return new Waypoint(options);
     }
 
     this.waypoints = options.waypoints || [];
 
     _.bindAll(this,
-        'register',
         'getWaypoint',
         'postWaypoint');
 
