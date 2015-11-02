@@ -5,6 +5,8 @@ function Wind (options) {
         return new Wind(options);
     }
 
+    this.boat_data = options.boat_data;
+    
     _.bindAll(this,
         'getApparant',
         'postApparant',

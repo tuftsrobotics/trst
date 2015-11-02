@@ -5,6 +5,8 @@ function Position (options) {
         return new Position(options);
     }
 
+    this.boat_data = options.boat_data;
+    
     _.bindAll(this,
         'getAll',
         'getGPS',
