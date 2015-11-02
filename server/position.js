@@ -7,7 +7,7 @@ function Position (options) {
 
     _.bindAll(this,
         'register',
-        'getAll'
+        'getAll',
         'getGPS',
         'postGPS',
         'getHeadingGPS',
