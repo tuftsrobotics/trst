@@ -12,7 +12,7 @@ Arduino must be connected on the port specified as the serial port.
 import serial
 import time
 
-ser = serial.Serial('/dev/ttyACM0', 115200)
+ser = serial.Serial('/dev/ttyACM1', 115200)
 
 
 
@@ -25,7 +25,7 @@ def main(track_time = False):
             line=ser.readline().rstrip()
             if track_time:
                 line = time.clock() + " " + line
-            print(line)
+    #        print(line)
             f=open('tempLog.dat','a')
             print >> f,line
             f.close()

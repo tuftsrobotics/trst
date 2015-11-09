@@ -25,8 +25,8 @@ def main(track_time = False):
             line=ser.readline().rstrip()
             if track_time:
                 line = time.clock() + " " + line
-            print(line)
-            f=open('tempLog.dat','a')
+#            print(line)
+            f=open('tempLog2.dat','a')
             print >> f,line
             f.close()
     except KeyboardInterrupt:

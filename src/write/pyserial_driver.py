@@ -24,6 +24,7 @@ class SerialConnection(object):
         if state == None:
             state = self.default_state
         assert type(state) == BoatState
+	print format_to_arduino(state).encode()
         self.ser.write(format_to_arduino(state).encode())
         
 

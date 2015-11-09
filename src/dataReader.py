@@ -172,7 +172,6 @@ class Boat(object):
        # self.url = "http://127.0.0.1:5000/"
 
     def post(self, data):
-
         requests.post(self.url, data = data)
 
     def get(self):
@@ -186,7 +185,7 @@ if __name__ == '__main__':
     data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
     boat = Boat()
     accum = [data[1]]
-    for d in data:          # This is very strange... but the first line is malformed
+    for d in data[-2000:]:          # This is very strange... but the first line is malformed
 #        print d[2], accum[-1][2]
         if d[2] == accum[-1][2]: #if same pgn
             accum.append(d)
