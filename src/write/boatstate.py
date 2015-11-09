@@ -7,34 +7,34 @@ This class holds the servo states of a boat
 
 """
 class BoatState(object):
-    R_SERVO_LOW = 0
-    R_SERVO_HIGH = 255
-    R_SERVO_START = (SERVO_HIGH - SERVO_LOW) / 2
+    R_SERVO_LOW = 1100
+    R_SERVO_HIGH = 1800
+    R_SERVO_START = (R_SERVO_HIGH + R_SERVO_LOW) / 2
     S_SERVO_LOW = 1100
     S_SERVO_HIGH = 1800
-    S_SERVO_START = (SERVO_HIGH - SERVO_LOW) / 2
+    S_SERVO_START = (S_SERVO_HIGH + S_SERVO_LOW) / 2
     
-    INCREMENT = 5
+    INCREMENT = 100
     def __init__(self):
         """ inits boatstate, boats should start rudder centered sails eased """
-        self.rudder_pos = self.SERVO_START
-        self.sails_pos = self.SERVO_LOW
+        self.rudder_pos = self.R_SERVO_START
+        self.sails_pos = self.S_SERVO_START
 
-    def turn_right(self, n = 5):
+    def turn_right(self, n = INCREMENT):
         self.set_rudder_pos(self.rudder_pos + n)
 
-    def turn_left(self, n = 5):
+    def turn_left(self, n = INCREMENT):
         self.set_rudder_pos(self.rudder_pos - n)
 
     def adjust_sails(self, n):
         self.set_sails_pos(self.sails_pos + n)
 
     def set_rudder_pos(self, new_pos):
-        if new_pos >= self.SERVO_LOW and new_pos < self.SERVO_HIGH:
+        if new_pos >= self.R_SERVO_LOW and new_pos < self.R_SERVO_HIGH:
             self.rudder_pos = new_pos
 
     def set_sails_pos(self, new_pos):
-        if new_pos >= self.SERVO_LOW and new_pos < self.SERVO_HIGH:
+        if new_pos >= self.S_SERVO_LOW and new_pos < self.S_SERVO_HIGH:
             self.sails_pos = new_pos
 
     def set_pos(self, new_pos):
