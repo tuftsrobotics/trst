@@ -41,13 +41,12 @@ class BoatState(object):
         assert new_pos >= -1
         assert new_pos <= 1
         if new_pos < 0:
-            scale = R_SERVO_CENTER - R_SERVO_LOW #positive
-            pos = new_pos * scale + R_SERVO_CENTER
+            scale = self.R_SERVO_CENTER - self.R_SERVO_LOW #positive
+            pos = new_pos * scale + self.R_SERVO_CENTER
         else:
-            scale = R_SERVO_HIGH - R_SERVO_CENTER
-            pos = new_pos * scale + R_SERVO_CENTER
+            scale = self.R_SERVO_HIGH - self.R_SERVO_CENTER
+            pos = new_pos * scale + self.R_SERVO_CENTER
         self.set_rudder_pos(pos)
-
 
     def set_sails_pos(self, new_pos):
         if new_pos >= self.S_SERVO_LOW and new_pos < self.S_SERVO_HIGH:

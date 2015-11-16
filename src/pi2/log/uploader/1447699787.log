@@ -1,0 +1,609 @@
+1FA04 F21C889F280AFFFF
+1FA04 F3FF7FF21E970BD0
+1FA04 F424FF7FFFFFFF7F
+1FA04 F5F1FFFFFFFFFFFF
+1FD02 A000004B01FAFFFF
+None
+1F113 A82ADA0000FFFFFF
+{'App Wind Angle': 1.9, 'App Wind Speed': 0.0, u'Reference': u'Apparent', u'SID': 160}
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0099999, u'SID': 168}
+1F112 731C290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 4EFC0B050A00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 115}
+1F113 A98B060000FFFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 7.4, u'SID': 78}
+1F112 741C290000E9F5FD
+{u'Rate': 0.0002999, u'SID': 169}
+1FD02 A11400EB89F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 116}
+1F010 4EF0734158DB6728
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 202.3, u'SID': 161, 'True Wind Speed': 0.2}
+1F11A 12F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:49.05000', u'SID': 78}
+1F113 AA00000000FFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 18}
+1F802 4FFC7F040F00FFFF
+{u'Rate': 0.0, u'SID': 170}
+1FD08 FF00019173FFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 6.6, u'SID': 79}
+1FD0A FF000058890F00FF
+{u'Actual Temperature': 22.7, u'Temperature Source': u'Outside Temperature', u'Temperature Instance': 0}
+1F112 751C290000E9F5FD
+{u'Pressure': 22528, u'Pressure Instance': 0, u'Pressure Source': 0}
+1FD13 41281A874A197CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 117}
+1F809 734158DB6728FF7F
+None
+1FD13 4297D50A000E7BFA
+{u'Date': u'2015.11.16', u'Time': u'18:49:49.05000'}
+1FD13 43FFFFFA03917302
+1FD13 44010201FFFFFFFF
+1F805 602B4F734158DB67
+None
+1F805 612800843E12ED77
+1F805 62E30500D85D2884
+1F805 635720F6007C9200
+1F805 640000000013FC08
+1F805 657800BE00DAF3FF
+1F805 66FF00FFFFFFFFFF
+1FA04 20934FFF0C02970B
+{u'Number of SVs': 8, u'Reference Station ID': 15, u'HDOP': 1.2, u'SID': 79, u'PDOP': 1.9, u'GNSS type': u'GPS+SBAS/WAAS', u'Geoidal Separation': -31.1, u'Latitude': 42.431465, u'Longitude': -71.1472516, u'Time': u'18:49:49.05000', u'Date': u'2015.11.16', u'Integrity': u'No integrity checking', u'Method': u'GNSS fix'}
+1FA04 215B5B0807FFFFFF
+1FA04 227FF205A21CB92F
+1FA04 233408FFFFFF7FF2
+1FA04 24070B021613FF7F
+1FA04 25FFFFFF7FF10AAD
+1FA04 262DA21C6009FFFF
+1FA04 27FF7FF10D6730AD
+1FA04 283C540BFFFFFF7F
+1FA04 29F20F442A658AA4
+1FA04 2A06FFFFFF7FF212
+1FA04 2B970B70B91C0CFF
+1FA04 2CFFFF7FF214C431
+1FA04 2DD8DA280AFFFFFF
+1FA04 2E7FF2157F16FBD1
+1FA04 2FF00AFFFFFF7FF2
+1F113 AB00000000FFFFFF
+None
+1F112 761C290000E9F5FD
+{u'Rate': 0.0, u'SID': 171}
+1FA04 30180000F175FF7F
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 118}
+1FA04 31FFFFFF7FF11DA2
+1FA04 321C889FC409FFFF
+1FA04 33FF7FF21E970BD0
+1FA04 3424FF7FFFFFFF7F
+1FA04 35F1FFFFFFFFFFFF
+1F113 AC00000000FFFFFF
+None
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0, u'SID': 172}
+1F112 771C290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 50FCBAF30F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 119}
+1FD02 A20A000E7BFAFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 357.5, u'SID': 80}
+1F113 AD9FD30000FFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.1, u'Reference': u'Apparent', u'SID': 162}
+1F112 781C290000E9F5FD
+{u'Rate': 0.0097, u'SID': 173}
+1F113 AE00000000FFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 120}
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0, u'SID': 174}
+1F112 791C290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 51FC91EC0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 121}
+1FD02 A314001A80F8FFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 347.0, u'SID': 81}
+1F113 AF612CFFFFFFFFFF
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 187.9, u'SID': 163, 'True Wind Speed': 0.2}
+1F112 7A1C290000E9F5FD
+{u'Rate': -0.0097, u'SID': 175}
+1FD07 E9C19173FF7FFA03
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 122}
+1F113 B01C35FFFFFFFFFF
+{u'Atmospheric Pressure': 101800, u'Temperature Instance': u'Outside', u'Temperature': 22.7, u'SID': 233}
+1F801 1A874A197CCA97D5
+{u'Rate': -0.0092998, u'SID': 176}
+1F112 7B1C290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 52FC2FEA0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 123}
+1F113 B175F9FFFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 343.5, u'SID': 82}
+1F112 7C1C290000E9F5FD
+{u'Rate': -0.0002999, u'SID': 177}
+1FD02 A40A000E7BFAFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 124}
+1F113 B28B060000FFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.1, u'Reference': u'Apparent', u'SID': 164}
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0002999, u'SID': 178}
+1F112 7D1C290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 53FC46EB0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 125}
+1F113 B300000000FFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 345.1, u'SID': 83}
+1F112 7E1C290000E9F5FD
+{u'Rate': 0.0, u'SID': 179}
+1FD02 A51400DF81F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 126}
+1F010 53F0734168026828
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 190.5, u'SID': 165, 'True Wind Speed': 0.2}
+1F11A 13F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:50.05000', u'SID': 83}
+1F113 B48B060000FFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 19}
+1F802 54FCFAEC0F00FFFF
+{u'Rate': 0.0002999, u'SID': 180}
+1F112 7F1C290000E9F5FD
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 347.6, u'SID': 84}
+1FD13 61281A874A197CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 127}
+1F809 734168026828FF7F
+None
+1FD13 6297D50A000E7BFA
+{u'Date': u'2015.11.16', u'Time': u'18:49:50.05000'}
+1FD13 63FFFFFA03917302
+1FD13 64010201FFFFFFFF
+1F805 802B547341680268
+None
+1F805 812800843E12ED77
+1F805 82E30500D85D2884
+1F805 835720F6A0029400
+1F805 840000000013FC07
+1F805 858200D200DAF3FF
+1F805 86FF00FFFFFFFFFF
+1FA04 409354FF0C02970B
+{u'Number of SVs': 7, u'Reference Station ID': 15, u'HDOP': 1.3, u'SID': 84, u'PDOP': 2.1, u'GNSS type': u'GPS+SBAS/WAAS', u'Geoidal Separation': -31.1, u'Latitude': 42.431465, u'Longitude': -71.1472516, u'Time': u'18:49:50.05000', u'Date': u'2015.11.16', u'Integrity': u'No integrity checking', u'Method': u'GNSS fix'}
+1FA04 415B5BA406FFFFFF
+1FA04 427FF205A21CB92F
+1FA04 433408FFFFFF7FF2
+1FA04 44070B021613FF7F
+1FA04 45FFFFFF7FF10AAD
+1FA04 462DA21CFC08FFFF
+1FA04 47FF7FF10D6730AD
+1FA04 483C540BFFFFFF7F
+1FA04 49F20F442A658A40
+1FA04 4A06FFFFFF7FF112
+1FA04 4B970B70B91C0CFF
+1FA04 4CFFFF7FF214C431
+1FA04 4DD8DA8C0AFFFFFF
+1FA04 4E7FF2157F16FBD1
+1FA04 4F540BFFFFFF7FF2
+1FA04 50180000F175FF7F
+1F113 B59FD30000FFFFFF
+None
+1F112 801C290000E9F5FD
+{u'Rate': 0.0097, u'SID': 181}
+1FA04 51FFFFFF7FF11DA2
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.3, u'Variation': -14.8, u'SID': 128}
+1FA04 521C889F6009FFFF
+1FA04 53FF7FF21E970BD0
+1FA04 5424FF7FFFFFFF7F
+1FA04 55F1FFFFFFFFFFFF
+1F113 B69FD30000FFFFFF
+None
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0097, u'SID': 182}
+1F112 810A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 55FCF4EB0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 129}
+1FD02 A600004B01FAFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 346.1, u'SID': 85}
+1F113 B79FD30000FFFFFF
+{'App Wind Angle': 1.9, 'App Wind Speed': 0.0, u'Reference': u'Apparent', u'SID': 166}
+1F112 820A290000E9F5FD
+{u'Rate': 0.0097, u'SID': 183}
+1F113 B89FD30000FFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 130}
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0097, u'SID': 184}
+1F112 830A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 56FC00E80F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 131}
+1FD02 A70F00606BF8FFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 340.3, u'SID': 86}
+1F113 B975F9FFFFFFFFFF
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 157.5, u'SID': 167, 'True Wind Speed': 0.15}
+1F112 840A290000E9F5FD
+{u'Rate': -0.0002999, u'SID': 185}
+1FD07 EBC19173FF7FFA03
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 132}
+1F113 BA00000000FFFFFF
+{u'Atmospheric Pressure': 101800, u'Temperature Instance': u'Outside', u'Temperature': 22.7, u'SID': 235}
+1F801 1A874A197CCA97D5
+{u'Rate': 0.0, u'SID': 186}
+1F112 850A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.1472516}
+1F802 57FC29E60F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 133}
+1F113 BB612CFFFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 337.6, u'SID': 87}
+1F112 860A290000E9F5FD
+{u'Rate': -0.0097, u'SID': 187}
+1FD02 A80A000E7BFAFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 134}
+1F113 BC9456FEFFFFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.1, u'Reference': u'Apparent', u'SID': 168}
+1F801 1A874A198CCA97D5
+{u'Rate': -0.0194999, u'SID': 188}
+1F112 870A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 58FC5DEC0A00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 135}
+1F113 BDD625FFFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 346.7, u'SID': 88}
+1F112 880A290000E9F5FD
+{u'Rate': -0.0099999, u'SID': 189}
+1FD02 A90F005F86F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 136}
+1F010 58F0734178296828
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 197.1, u'SID': 169, 'True Wind Speed': 0.15}
+1F11A 14F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:51.05000', u'SID': 88}
+1F113 BE00000000FFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 20}
+1F802 59FC51ED0A00FFFF
+{u'Rate': 0.0, u'SID': 190}
+1FD08 FF00019B73FFFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 348.1, u'SID': 89}
+1FD0A FF000058890F00FF
+{u'Actual Temperature': 22.8, u'Temperature Source': u'Outside Temperature', u'Temperature Instance': 0}
+1F112 890A290000E9F5FD
+{u'Pressure': 22528, u'Pressure Instance': 0, u'Pressure Source': 0}
+1FD13 81281A874A198CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 137}
+1F809 734178296828FF7F
+None
+1FD13 8297D50A000E7BFA
+{u'Date': u'2015.11.16', u'Time': u'18:49:51.05000'}
+1FD13 83FFFFFA039B7302
+1FD13 84010201FFFFFFFF
+1F814 4014573834FF0000
+None
+1F814 4100000000000000
+1F814 42000000573834FF
+1F805 A02B597341782968
+None
+1F805 A12800843E12ED77
+1F805 A2E30500780AE287
+1F805 A35720F6A0029400
+1F805 A40000000013FC07
+1F805 A58200D200DAF3FF
+1F805 A6FF00FFFFFFFFFF
+1FA04 609359FF0C02970B
+{u'Number of SVs': 7, u'Reference Station ID': 15, u'HDOP': 1.3, u'SID': 89, u'PDOP': 2.1, u'GNSS type': u'GPS+SBAS/WAAS', u'Geoidal Separation': -31.1, u'Latitude': 42.431465, u'Longitude': -71.14725, u'Time': u'18:49:51.05000', u'Date': u'2015.11.16', u'Integrity': u'No integrity checking', u'Method': u'GNSS fix'}
+1FA04 615B5B4006FFFFFF
+1FA04 627FF205A21CB92F
+1FA04 633408FFFFFF7FF2
+1FA04 64070B021613FF7F
+1FA04 65FFFFFF7FF10AAD
+1FA04 662DA21C3408FFFF
+1FA04 67FF7FF10D6730AD
+1FA04 683C540BFFFFFF7F
+1FA04 69F20F442A658A40
+1FA04 6A06FFFFFF7FF112
+1FA04 6B970B70B9B80BFF
+1FA04 6CFFFF7FF214C431
+1F113 BF00000000FFFFFF
+None
+1F112 8A0A290000E9F5FD
+{u'Rate': 0.0, u'SID': 191}
+1FA04 6DD8DA8C0AFFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 138}
+1FA04 6E7FF2157F16FBD1
+1FA04 6F540BFFFFFF7FF2
+1FA04 70180000F175FF7F
+1FA04 71FFFFFF7FF11DA2
+1FA04 721C889F6009FFFF
+1FA04 73FF7FF21E970BD0
+1FA04 7424FF7FFFFFFF7F
+1FA04 75F1FFFFFFFFFFFF
+1F113 C08B060000FFFFFF
+None
+1F801 1A874A198CCA97D5
+{u'Rate': 0.0002999, u'SID': 192}
+1F112 8B0A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 5AFCC0EB0A00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 139}
+1FD02 AA0F000E7BFAFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 345.8, u'SID': 90}
+1F113 C1612CFFFFFFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.15, u'Reference': u'Apparent', u'SID': 170}
+1F112 8C0A290000E9F5FD
+{u'Rate': -0.0097, u'SID': 193}
+1F113 C2612CFFFFFFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 140}
+1F801 1A874A198CCA97D5
+{u'Rate': -0.0097, u'SID': 194}
+1F112 8D0A290000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 5BFC57E20F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 141}
+1FD02 AB0F00B76EF8FFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 332.0, u'SID': 91}
+1F113 C34E5FFEFFFFFFFF
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 162.4, u'SID': 171, 'True Wind Speed': 0.15}
+1F112 8E0A290000E9F5FD
+{u'Rate': -0.0190999, u'SID': 195}
+1FD07 EDC19B73FF7FFA03
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 142}
+1F113 C4E1B5FCFFFFFFFF
+{u'Atmospheric Pressure': 101800, u'Temperature Instance': u'Outside', u'Temperature': 22.8, u'SID': 237}
+1F801 1A874A198CCA97D5
+{u'Rate': -0.0386, u'SID': 196}
+1F112 8FF9280000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 5CFCA3DD0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 143}
+1F113 C59456FEFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 325.1, u'SID': 92}
+1F112 90F9280000E9F5FD
+{u'Rate': -0.0194999, u'SID': 197}
+1FD02 AC05000E7BFAFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 144}
+1F113 C69456FEFFFFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.05, u'Reference': u'Apparent', u'SID': 172}
+1F801 1A874A198CCA97D5
+{u'Rate': -0.0194999, u'SID': 198}
+1F112 91F9280000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 5DFCF5DF0A00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 145}
+1F113 C7AF8BFDFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 328.5, u'SID': 93}
+1F112 92F9280000E9F5FD
+{u'Rate': -0.0287999, u'SID': 199}
+1FD02 AD0F00A580F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 146}
+1F010 5DF0734188506828
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 188.7, u'SID': 173, 'True Wind Speed': 0.15}
+1F11A 15F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:52.05000', u'SID': 93}
+1F113 C8F582FDFFFFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 21}
+1F802 5EFCEFE10A00FFFF
+{u'Rate': -0.0291999, u'SID': 200}
+1F112 93F9280000E9F5FD
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 331.4, u'SID': 94}
+1FD13 A1281A874A198CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 147}
+1F809 734188506828FF7F
+None
+1FD13 A297D50A000E7BFA
+{u'Date': u'2015.11.16', u'Time': u'18:49:52.05000'}
+1FD13 A3FFFFFA039B7302
+1FD13 A4010201FFFFFFFF
+1F805 C02B5E7341885068
+None
+1F805 C12800843E12ED77
+1F805 C2E30500780AE287
+1F805 C35720F6A0029400
+1F805 C40000000013FC07
+1F805 C596000E01DAF3FF
+1F805 C6FF00FFFFFFFFFF
+1FA04 80935EFF0C02970B
+{u'Number of SVs': 7, u'Reference Station ID': 15, u'HDOP': 1.5, u'SID': 94, u'PDOP': 2.7, u'GNSS type': u'GPS+SBAS/WAAS', u'Geoidal Separation': -31.1, u'Latitude': 42.431465, u'Longitude': -71.14725, u'Time': u'18:49:52.05000', u'Date': u'2015.11.16', u'Integrity': u'No integrity checking', u'Method': u'GNSS fix'}
+1FA04 815B5BA406FFFFFF
+1FA04 827FF105A21CB92F
+1FA04 833408FFFFFF7FF2
+1FA04 84070B021613FF7F
+1FA04 85FFFFFF7FF10AAD
+1FA04 862DA21CD007FFFF
+1FA04 87FF7FF10D6730AD
+1FA04 883CF00AFFFFFF7F
+1FA04 89F20F442A658ADC
+1FA04 8A05FFFFFF7FF212
+1FA04 8B970B70B91C0CFF
+1FA04 8CFFFF7FF214C431
+1FA04 8DD8DA280AFFFFFF
+1FA04 8E7FF2152E17FBD1
+1FA04 8FF00AFFFFFF7FF2
+1F113 C99456FEFFFFFFFF
+None
+1F112 94F9280000E9F5FD
+{u'Rate': -0.0194999, u'SID': 201}
+1FA04 90180000F175FF7F
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 148}
+1FA04 91FFFFFF7FF11DA2
+1FA04 921C889F6009FFFF
+1FA04 93FF7FF21E970BD0
+1FA04 9424FF7FFFFFFF7F
+1FA04 95F1FFFFFFFFFFFF
+1F113 CA4E5FFEFFFFFFFF
+None
+1F801 1A874A198CCA97D5
+{u'Rate': -0.0190999, u'SID': 202}
+1F112 95F9280000E9F5FD
+{u'Latitude': 42.431465, u'Longitude': -71.14725}
+1F802 5FFC75E10A00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 149}
+1FD02 AE00004B01FAFFFF
+{u'COG Reference': u'True', u'SOG': 0.1, u'COG': 330.7, u'SID': 95}
+1F113 CBAF8BFDFFFFFFFF
+{'App Wind Angle': 1.9, 'App Wind Speed': 0.0, u'Reference': u'Apparent', u'SID': 174}
+1F112 96F9280000E9F5FD
+{u'Rate': -0.0287999, u'SID': 203}
+1F113 CCAF8BFDFFFFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 150}
+1F801 2A874A198CCA97D5
+{u'Rate': -0.0287999, u'SID': 204}
+1F112 97F9280000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 60FC98DE0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 151}
+1FD02 AF0F00C877F8FFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 326.5, u'SID': 96}
+1F113 CDAF8BFDFFFFFFFF
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 175.7, u'SID': 175, 'True Wind Speed': 0.15}
+1F112 98F9280000E9F5FD
+{u'Rate': -0.0287999, u'SID': 205}
+1FD07 EFC19B73FF7FFA03
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 152}
+1F113 CE0850FEFFFFFFFF
+{u'Atmospheric Pressure': 101800, u'Temperature Instance': u'Outside', u'Temperature': 22.8, u'SID': 239}
+1F801 2A874A198CCA97D5
+{u'Rate': -0.0198, u'SID': 206}
+1F112 99F9280000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 61FC92DD0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 153}
+1F113 CF4E5FFEFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 325.0, u'SID': 97}
+1F112 9AF9280000E9F5FD
+{u'Rate': -0.0190999, u'SID': 207}
+1FD02 B00A000E7BFAFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.1, u'Variation': -14.8, u'SID': 154}
+1F113 D0F582FDFFFFFFFF
+{'App Wind Angle': 180.5, 'App Wind Speed': 0.1, u'Reference': u'Apparent', u'SID': 176}
+1F801 2A874A198CCA97D5
+{u'Rate': -0.0291999, u'SID': 208}
+1F112 9B0A290000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 62FC18E00F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 155}
+1F113 D14E5FFEFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 328.7, u'SID': 98}
+1F112 9C0A290000E9F5FD
+{u'Rate': -0.0190999, u'SID': 209}
+1FD02 B10F008E79F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 156}
+1F010 62F0734198776828
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 178.3, u'SID': 177, 'True Wind Speed': 0.15}
+1F11A 16F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:53.05000', u'SID': 98}
+1F113 D21C35FFFFFFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 22}
+1F802 63FC3AE00F00FFFF
+{u'Rate': -0.0092998, u'SID': 210}
+1FD08 FF00019B73FFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 328.9, u'SID': 99}
+1FD0A FF0000BC890F00FF
+{u'Actual Temperature': 22.8, u'Temperature Source': u'Outside Temperature', u'Temperature Instance': 0}
+1F112 9D0A290000E9F5FD
+{u'Pressure': 48128, u'Pressure Instance': 0, u'Pressure Source': 0}
+1FD13 C1282A874A198CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 157}
+1F809 734198776828FF7F
+None
+1FD13 C297D50A000E7BFA
+{u'Date': u'2015.11.16', u'Time': u'18:49:53.05000'}
+1FD13 C3FFFFFA039B7302
+1FD13 C4010201FFFFFFFF
+1F805 E02B637341987768
+None
+1F805 E1280024EBCBF077
+1F805 E2E30500780AE287
+1F805 E35720F6A0029400
+1F805 E40000000013FC08
+1F805 E57800BE00DAF3FF
+1F805 E6FF00FFFFFFFFFF
+1FA04 A09363FF0C02970B
+{u'Number of SVs': 8, u'Reference Station ID': 15, u'HDOP': 1.2, u'SID': 99, u'PDOP': 1.9, u'GNSS type': u'GPS+SBAS/WAAS', u'Geoidal Separation': -31.1, u'Latitude': 42.4314666, u'Longitude': -71.14725, u'Time': u'18:49:53.05000', u'Date': u'2015.11.16', u'Integrity': u'No integrity checking', u'Method': u'GNSS fix'}
+1FA04 A15B5B0807FFFFFF
+1FA04 A27FF205A21CB92F
+1FA04 A3D007FFFFFF7FF2
+1FA04 A4070B021613FF7F
+1FA04 A5FFFFFF7FF10AAD
+1FA04 A62DA21C6C07FFFF
+1FA04 A7FF7FF10D6730AD
+1FA04 A83CF00AFFFFFF7F
+1FA04 A9F20F442A658ADC
+1FA04 AA05FFFFFF7FF212
+1FA04 AB970B70B9B80BFF
+1FA04 ACFFFF7FF214C431
+1FA04 ADD8DA280AFFFFFF
+1FA04 AE7FF2152E17FBD1
+1FA04 AF8C0AFFFFFF7FF2
+1F113 D3612CFFFFFFFFFF
+None
+1F112 9E0A290000E9F5FD
+{u'Rate': -0.0097, u'SID': 211}
+1FA04 B0180000F175FF7F
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 158}
+1FA04 B1FFFFFF7FF11DA2
+1FA04 B21C889F280AFFFF
+1FA04 B3FF7FF21E970BD0
+1FA04 B424FF7FFFFFFF7F
+1FA04 B5F1FFFFFFFFFFFF
+1F113 D400000000FFFFFF
+None
+1F801 2A874A198CCA97D5
+{u'Rate': 0.0, u'SID': 212}
+1F112 9F0A290000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 64FCD8DD0F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 159}
+1FD02 B200004B01FAFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 325.4, u'SID': 100}
+1F113 D59FD30000FFFFFF
+{'App Wind Angle': 1.9, 'App Wind Speed': 0.0, u'Reference': u'Apparent', u'SID': 178}
+1F112 A00A290000E9F5FD
+{u'Rate': 0.0097, u'SID': 213}
+1F113 D68B060000FFFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 160}
+1F801 2A874A198CCA97D5
+{u'Rate': 0.0002999, u'SID': 214}
+1F112 A10A290000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 65FC8CDC1400FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 161}
+1FD02 B314007D61F8FFFF
+{u'COG Reference': u'True', u'SOG': 0.2, u'COG': 323.5, u'SID': 101}
+1F113 D71C35FFFFFFFFFF
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 143.0, u'SID': 179, 'True Wind Speed': 0.2}
+1F112 A20A290000E9F5FD
+{u'Rate': -0.0092998, u'SID': 215}
+1FD07 F1C19B73FF7FFA03
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 162}
+1F113 D89456FEFFFFFFFF
+{u'Atmospheric Pressure': 101800, u'Temperature Instance': u'Outside', u'Temperature': 22.8, u'SID': 241}
+1F801 2A874A198CCA97D5
+{u'Rate': -0.0194999, u'SID': 216}
+1F112 A30A290000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 66FC46DC1400FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 163}
+1F113 D99456FEFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.2, u'COG': 323.1, u'SID': 102}
+1F112 A40A290000E9F5FD
+{u'Rate': -0.0194999, u'SID': 217}
+1FD02 B400004B01FAFFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 164}
+1F113 DA1C35FFFFFFFFFF
+{'App Wind Angle': 1.9, 'App Wind Speed': 0.0, u'Reference': u'Apparent', u'SID': 180}
+1F801 2A874A198CCA97D5
+{u'Rate': -0.0092998, u'SID': 218}
+1F112 A50A290000E9F5FD
+{u'Latitude': 42.4314666, u'Longitude': -71.14725}
+1F802 67FC1DE10F00FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 165}
+1F113 DB9456FEFFFFFFFF
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 330.2, u'SID': 103}
+1F112 A60A290000E9F5FD
+{u'Rate': -0.0194999, u'SID': 219}
+1FD02 B50F009468F8FFFF
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 166}
+1F010 67F07341A89E6828
+{u'Reference': u'True (ground referenced to North)', 'True Wind Angle': 153.4, u'SID': 181, 'True Wind Speed': 0.15}
+1F11A 17F57341E9F5FFFF
+{u'Date': u'2015.11.16', u'Source': u'GPS', u'Time': u'18:49:54.05000', u'SID': 103}
+1F113 DC612CFFFFFFFFFF
+{u'Source': u'WMM 2005', u'Age of service': u'2015.11.16', u'Variation': -14.8, u'SID': 23}
+1F802 68FC5DE30F00FFFF
+{u'Rate': -0.0097, u'SID': 220}
+1F112 A70A290000E9F5FD
+{u'COG Reference': u'True', u'SOG': 0.15, u'COG': 333.5, u'SID': 104}
+1FD13 E1282A874A198CCA
+{u'Deviation': 0.0, u'Reference': u'Magnetic', u'Heading': 60.2, u'Variation': -14.8, u'SID': 167}
+1F809 7341A89E6828FF7F
