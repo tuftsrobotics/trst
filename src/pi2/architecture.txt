@@ -1,0 +1,33 @@
+architecture.txt
+Created by Alex Tong Nov 14, 2015
+
+This file details the program structure of the trst project, specifically those
+processes running on the raspberry pi.
+
+start.sh        --  starts all necessary processes:
+                        1. server/app.js
+                        2. uploader.py
+                        3. navigator.py
+
+app.js          --  node/express server running on localhost:8888
+                    responsible for structuring sensor data
+                    (logs to log/server.log)
+
+uploader.py     --  adapter from arduino0 (sensor) to port express server
+                    (logs to log/upload.log)
+
+navigator.py    --  two modes: manual, auto (mode set at BOF)
+                        user mode is used to control the boat servos directly
+                        primary use is for debugging/testing
+
+                        auto mode is used when the boat takes control 
+
+                    communicates through driver.py
+                    (logs to log/navigator.log)
+
+driver.py       --  drivers for pyserial 
+                    (logs to log/driver.log)
+
+boatstate.py    -- keeps all servo information and state of rudder/sail servos
+                    
+
