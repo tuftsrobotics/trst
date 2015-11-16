@@ -7,6 +7,8 @@ This class holds the servo states of a boat
 
 """
 class BoatState(object):
+    """ Holds a boatstate """
+    """ Constants need to be finetuned """
     R_SERVO_LOW = 1100
     R_SERVO_CENTER = 1470
     R_SERVO_HIGH = 1800
