@@ -46,7 +46,7 @@ class BoatState(object):
         else:
             scale = self.R_SERVO_HIGH - self.R_SERVO_CENTER
             pos = new_pos * scale + self.R_SERVO_CENTER
-        self.set_rudder_pos(pos)
+        self.set_rudder_pos(int(pos))
 
     def set_sails_pos(self, new_pos):
         if new_pos >= self.S_SERVO_LOW and new_pos < self.S_SERVO_HIGH:

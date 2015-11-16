@@ -18,7 +18,8 @@ from pyserial_driver import SerialConnection
 
 pid_nav = pid.PID()
 boat_state = BoatState()
-serial     = SerialConnection(port = '/dev/ttyACM1')
+#serial     = SerialConnection(port = '/dev/ttyACM1')
+serial     = SerialConnection(port = '/dev/tty.usbmodem1411')
 
 def get_vect_to_wp(p):
     c = data.request('gps')
@@ -38,7 +39,10 @@ def navigate(boat_data, waypoint):
     next_pos = LatLon(Latitude(waypoint['Latitude']), Longitude(waypoint['Longitude']))
 #PID update
     pid_nav.target = float(current_pos.heading_initial(next_pos))
-    boat_state.set_rudder_scaled_pos(pid_nav.update(float(boat_data['Heading'])))
+    heading = float(boat_data['Heading'])
+    if heading > 180:
+        heading = heading - 360
+    boat_state.set_rudder_scaled_pos(pid_nav.update(heading))
     serial.write(state = boat_state)
 
 def main():
