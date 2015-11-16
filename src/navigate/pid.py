@@ -17,7 +17,8 @@ def bound(val, min, max):
 
 class PID:
     """ start with P, add I, then maybe D """
-    def __init__(self, P = 1.0, I = 0.0, D = 0.0, I_max = 1.0, I_min = -1.0):
+    """ P is set at 1/200 initially to scale a heading difference to between -1 and 1 """
+    def __init__(self, P = .005, I = 0.0, D = 0.0, I_max = 1.0, I_min = -1.0):
         self.wP = P
         self.wI = I
         self.wD = D
