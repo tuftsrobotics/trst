@@ -29,10 +29,12 @@ Waypoint.prototype.register =  function register (router) {
 //TODO: Actual waypoint handling
 
 Waypoint.prototype.getWaypoint = function getWaypoint (req, res, next) {
-    res.status(200).send(this.waypoints[0]);
+    res.status(200).send(this.waypoints);
 }
 
 Waypoint.prototype.postWaypoint = function postWaypoint (req, res, next) {
-    this.waypoints[0] = req.data;
+    this.waypoints = req.data;
+    console.log("waypoint post:   ")
+    console.log(req.data);
     res.sendStatus(200);
 }
