@@ -4,6 +4,7 @@ import serial
 import subprocess
 import requests
 import json
+from argparse import ArgumentParser
 
 def analyze(lines, boat = None):
     """ takes a line and pushes the data to boatd"""
@@ -153,6 +154,13 @@ def main(track_time = False, ser = '/dev/ttyACM0', log = True, logfilenum = None
     f.close()
 
 if __name__ == '__main__':
+
+#PARSE
+    argparser = ArgumentParser()
+    argparser.add_argument('-t', action = 'store', dest = 'run_number', help='run number used in logging')
+    argparser.add_argument('-port', action = 'store', dest = 'port', default = '/dev/ttyACM0', help='port for uploader arduino')
+    r = argparser.parse_args()
+    log = (r.run_number is not None)
     filt = get_filt()
-    main(ser = '/dev/tty.usbmodem1421')
+    main(ser = r.port, log = log, logfilenum = r.run_number)
 

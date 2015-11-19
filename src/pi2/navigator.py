@@ -13,13 +13,8 @@ import pid
 import time
 from boatstate import BoatState
 from pyserial_driver import SerialConnection
+from argparse import ArgumentParser
 
-
-
-pid_nav = pid.PID()
-boat_state = BoatState()
-#serial     = SerialConnection(port = '/dev/ttyACM1')
-serial     = SerialConnection(port = '/dev/tty.usbmodem1411')
 
 def get_vect_to_wp(p):
     c = data.request('gps')
@@ -46,13 +41,27 @@ def navigate(boat_data, waypoint):
     serial.write(state = boat_state)
 
 def main():
-    print type(initial_waypoint)
     data.post_request('waypoint', initial_waypoint)
-    while 1:
-        waypoint = data.get_request('waypoint').text
-        boat_data = data.get_request('').json()
-        navigate(boat_data, waypoint)
-        time.sleep(0.5)
+    try:
+        while 1:
+            waypoint = data.get_request('waypoint').text
+            boat_data = data.get_request('').json()
+            navigate(boat_data, waypoint)
+            time.sleep(0.5)
+    except KeyboardInterrupt:
+        print "\nINTERUPT NAVIGATOR PROGRAM HALT"
 
 if __name__ == '__main__':
+#PARSE
+    argparser = ArgumentParser()
+    argparser.add_argument('-t', action = 'store', dest = 'run_number', help='run number used in logging')
+    argparser.add_argument('-port', action = 'store', dest = 'port', default = '/dev/ttyACM1', help='port for navigator arduino')
+    r = argparser.parse_args()
+    log = (r.run_number is not None)
+
+    pid_nav = pid.PID()
+    boat_state = BoatState()
+#serial     = SerialConnection(port = '/dev/ttyACM1')
+    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
     main()
+
