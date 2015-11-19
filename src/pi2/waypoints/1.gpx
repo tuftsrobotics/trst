@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0" creator="GPS Visualizer Sandbox http://www.gpsvisualizer.com/draw/" xmlns="http://www.topografix.com/GPX/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+	<wpt lat="42.4316005" lon="-71.1473107">
+		<name>start</name>
+	</wpt>
+	<trk>
+		<name></name>
+		<desc>Length: 0.179 km (0.112 mi)</desc>
+		<trkseg>
+			<trkpt lat="42.4316045" lon="-71.1472920"></trkpt>
+			<trkpt lat="42.4317767" lon="-71.1476011"></trkpt>
+			<trkpt lat="42.4320083" lon="-71.1478217"></trkpt>
+			<trkpt lat="42.4321281" lon="-71.1479075"></trkpt>
+			<trkpt lat="42.4321172" lon="-71.1476219"></trkpt>
+			<trkpt lat="42.4321123" lon="-71.1473604"></trkpt>
+			<trkpt lat="42.4319450" lon="-71.1473738"></trkpt>
+			<trkpt lat="42.4317737" lon="-71.1473429"></trkpt>
+			<trkpt lat="42.4316658" lon="-71.1473161"></trkpt>
+			<trkpt lat="42.4316154" lon="-71.1472920"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>
