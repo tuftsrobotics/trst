@@ -19,7 +19,7 @@ def format_to_arduino(state):
 
 class SerialConnection(object):
     def __init__(self, port = '/dev/ttyACM0', baudrate = 115200, log = True,  logfilenum = None):
-        if logfile is None:
+        if logfilenum is None:
             self.log_file = open('log/driver/' + str(int(time.time())) + '.log', 'a')
         else:
             self.log_file = open('log/driver/' + str(logfilenum) + '.log', 'a')
