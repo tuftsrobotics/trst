@@ -117,7 +117,6 @@ def analyze(lines, boat = None, port = 2222):
     try:
         data = json.loads(json_val)
         try:
-#            boat.post(json.dumps(data["fields"]))
             fields = data["fields"]
             if data["description"] == "Wind Data":
                 ref = fields["Reference"]
@@ -127,9 +126,7 @@ def analyze(lines, boat = None, port = 2222):
                 if ref == "True (ground referenced to North)":
                     fields["True Wind Angle"] = fields.pop("Wind Angle")
                     fields["True Wind Speed"] = fields.pop("Wind Speed")
-                print fields
             boat.post(fields)
-#            print json.dumps(data["fields"])
         except KeyError:
             print "Key ERROR:", data
             pass
@@ -172,7 +169,7 @@ class Boat(object):
        # self.url = "http://127.0.0.1:5000/"
 
     def post(self, data):
-        requests.post(self.url, data = data)
+        requests.post(self.url, json = data)
 
     def get(self):
         return requests.get(self.url)
@@ -182,7 +179,7 @@ if __name__ == '__main__':
     good_pgns = p.valid_set
 #    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
+    data = execute('../data/2/feed.2', to_can_dump, filt, has_time = False) #GNSS Position Data
     boat = Boat()
     accum = [data[1]]
     for d in data[-2000:]:          # This is very strange... but the first line is malformed
