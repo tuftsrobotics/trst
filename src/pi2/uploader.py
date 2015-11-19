@@ -43,12 +43,15 @@ class Boat(object):
         self.url = "http://127.0.0.1:8888/"
 
     def post(self, data):
-        requests.post(self.url, data = data)
+        """THIS WAS CHANGED FOR FLASK SERVER TRANSITION """
+        requests.post(self.url, json = data)
+#        requests.post(self.url, data = data)
 
     def get(self):
         return requests.get(self.url)
 
 def get_filt():
+    """ uses the files pgn.py and valid_pgns to get the set of pgns we track"""
     p = Pgns()
     good_pgns = p.valid_set
 #    good_pgns = set([129029])
@@ -111,12 +114,17 @@ def main_past():
             analyze(accum, boat) # analyze pgn return json
             accum = [d]
 
-def main(track_time = False, ser = '/dev/ttyACM0'):
+def main(track_time = False, ser = '/dev/ttyACM0', log = True, logfilenum = None):
     ser = serial.Serial(ser, 115200)
-    timesinceepoch = int(time.time())
-    f=open('log/uploader/' + str(timesinceepoch) + '.log','a')
+    if logfilenum is None:
+        timesinceepoch = int(time.time())
+        f = open('log/uploader/' + str(timesinceepoch) + '.log','a')
+    else:
+        f = open('log/uploader/' + str(logfilenum) + '.log', 'a')
+
     try:
         boat = Boat()
+        #look for a good line
         can_line = None
         while can_line is None:
             line=ser.readline().rstrip()
@@ -124,18 +132,21 @@ def main(track_time = False, ser = '/dev/ttyACM0'):
         accum = [can_line]
         while 1:
             #line is a string read from the serial port
+            #look for a good line
             d = None
             while d is None:
                 line=ser.readline().rstrip()
                 if track_time:
                     line = time.clock() + " " + line
                 d = to_can_dump(line.split())
-            print >> f, line
+            if log:
+                print >> f, line
             if d[2] == accum[-1][2]: #if same pgn
                 accum.append(d)
             else:
                 analyzed = analyze(accum, boat) # analyze pgn return json
-                print >> f, analyzed
+                if log:
+                    print >> f, analyzed
                 accum = [d]
     except KeyboardInterrupt:
         print "\nINTERUPT PROGRAM HALT"

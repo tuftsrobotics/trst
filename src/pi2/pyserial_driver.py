@@ -11,25 +11,31 @@ import serial
 from boatstate import BoatState
 import time
 
+DEBUG = False
+
 def format_to_arduino(state):
     rudder, sails = state.get_pos()
     return str(rudder) + ',' + str(sails) + '\n'
 
 class SerialConnection(object):
-    def __init__(self, port = '/dev/ttyACM0', baudrate = 115200):
-        t = time.time()
-        self.log_file = open('log/driver/' + str(t) + '.log', 'a')
+    def __init__(self, port = '/dev/ttyACM0', baudrate = 115200, log = True,  logfilenum = None):
+        if logfile is None:
+            self.log_file = open('log/driver/' + str(int(time.time())) + '.log', 'a')
+        else:
+            self.log_file = open('log/driver/' + str(logfilenum) + '.log', 'a')
         self.default_state = BoatState()
         self.ser = serial.Serial(port, baudrate)
         self.last_state_written = self.default_state
-
+        self.log = log
     def write(self, state = None):
-        print state
         if state == None:
             state = self.default_state
         assert type(state) == BoatState
         string = format_to_arduino(state).encode()
-        print string
+        if DEBUG:
+            print "STATE:", state
+            print "SENT:", string
         self.ser.write(string)
-        print >> self.log_file, string
+        if self.log:
+            print >> self.log_file, string
 
