@@ -179,7 +179,7 @@ if __name__ == '__main__':
     good_pgns = p.valid_set
 #    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../data/2/feed.2', to_can_dump, filt, has_time = False) #GNSS Position Data
+    data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
     boat = Boat()
     accum = [data[1]]
     for d in data[-2000:]:          # This is very strange... but the first line is malformed
