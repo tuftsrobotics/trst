@@ -3,8 +3,15 @@
 #
 #
 #
+"""
+This module is a navigator given a series of waypoints on a server
 
-initial_waypoint = {'Latitude': 42.432136, 'Longitude': -71.147794}
+"""
+
+
+WAIT_TIME = 0.5
+
+#initial_waypoint = {'Latitude': 42.432136, 'Longitude': -71.147794}
 # about 100 meters off the dock
 
 from LatLon import LatLon, Latitude, Longitude
@@ -15,10 +22,8 @@ from boatstate import BoatState
 from pyserial_driver import SerialConnection
 from argparse import ArgumentParser
 
-
 def get_vect_to_wp(p):
-    c = data.request('gps')
-    print c.json()
+    c = data.request()
 
 def get_vect(p1, p2):
     """returns heading and magnitude between two latlon objects """
@@ -26,28 +31,32 @@ def get_vect(p1, p2):
     assert type(p2) == type(LatLon)
     return p2 - p1
 
+def get_latlon_from_dict(d):
+    assert 'Latitude' in d and 'Longitude' in d
+    return LatLon(d['Latitude'], d['Longitude'])
 
 def navigate(boat_data, waypoint):
-    current_pos = LatLon(Latitude(boat_data['Latitude']), Longitude(boat_data['Longitude']))
-#remove for waypoint goodness TODO
-    waypoint = initial_waypoint
-    next_pos = LatLon(Latitude(waypoint['Latitude']), Longitude(waypoint['Longitude']))
-#PID update
-    pid_nav.target = float(current_pos.heading_initial(next_pos))
-    heading = float(boat_data['Heading'])
-    if heading > 180:
-        heading = heading - 360
+    curr_pos = get_latlon_from_dict(boat_data)
+    next_pos = get_latlon_from_dict(waypoint)
+#TODO unhardcode deviation
+    deviation = '-14.8'
+    true_heading = float(boat_data['Heading']) + deviation
+    if true_heading > 180: #correct to range [-180,180]
+        true_heading = true_heading - 360
+    #PID update
+    pid_nav.target = float(curr_pos.heading_initial(next_pos)) #true angle to target
     boat_state.set_rudder_scaled_pos(pid_nav.update(heading))
+
     serial.write(state = boat_state)
 
 def main():
-    data.post_request('waypoint', initial_waypoint)
+    #data.post_request('waypoint', initial_waypoint)
     try:
         while 1:
             waypoint = data.get_request('waypoint').text
             boat_data = data.get_request('').json()
             navigate(boat_data, waypoint)
-            time.sleep(0.5)
+            time.sleep(WAIT_TIME)
     except KeyboardInterrupt:
         print "\nINTERUPT NAVIGATOR PROGRAM HALT"
 

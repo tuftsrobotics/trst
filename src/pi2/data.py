@@ -5,7 +5,7 @@ server_port = '8888'
 #server_port = '2222' # boatd
 server      = 'http://' + server_url + ':' + server_port + '/'
 
-def get_request(string):
+def get_request(string = ''):
     """ gets the data specified by the identifier """
 
     r = requests.get(server + string)
@@ -17,7 +17,7 @@ def get_request(string):
     assert r.status_code == 200
     return r
     
-def post_request(string, data):
+def post_request(string = '', data):
     r = requests.post(server + string, data = data)
     if r.status_code == 404:
         print "ERROR 404 string not found"
