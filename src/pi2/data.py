@@ -17,8 +17,9 @@ def get_request(string = ''):
     assert r.status_code == 200
     return r
     
-def post_request(string = '', data):
-    r = requests.post(server + string, data = data)
+def post_request(string = '', data = ''):
+    r = requests.post(server + string, json = data)
+    #r = requests.post(server + string, data = data) #changed for flask server
     if r.status_code == 404:
         print "ERROR 404 string not found"
     if r.status_code != 200:
