@@ -56,13 +56,19 @@ def pull_data():
         print "NO BOAT DATA EXITING"
     return boat_data
 
-def main():
-    #data.post_request('waypoint', initial_waypoint)
+def main(log = False, logfilenum = None):
+    if logfilenum is None:
+        timesinceepoch = int(time.time())
+        f = open('log/navigator/' + str(timesinceepoch) + '.log','a')
+    else:
+        f = open('log/navigator/' + str(logfilenum) + '.log', 'a')
     try:
-        waypoints = data.get_request('waypoint').json()
         while 1:
+#TODO how often do we pull waypoints?
+            waypoints = data.get_request('waypoint').json()
             boat_data = pull_data()
-            navigate(boat_data, waypoints["0"]) #note that dictionary keys are string
+            next_waypoint = waypoints["0"]
+            navigate(boat_data, next_waypoint) #note that dictionary keys are string
             time.sleep(WAIT_TIME)
     except KeyboardInterrupt:
         print "\nINTERUPT NAVIGATOR PROGRAM HALT"
@@ -74,10 +80,9 @@ if __name__ == '__main__':
     argparser.add_argument('-port', action = 'store', dest = 'port', default = '/dev/ttyACM1', help='port for navigator arduino')
     r = argparser.parse_args()
     log = (r.run_number is not None)
-
     pid_nav = pid.PID()
     boat_state = BoatState()
 #serial     = SerialConnection(port = '/dev/ttyACM1')
 #    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
-    main()
+    main(log = log, logfilenum = run_number)
 
