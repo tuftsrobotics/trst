@@ -15,16 +15,15 @@ def gpx_main(infile, logfilenum):
     for track in gpx.tracks:
         for segment in track.segments:
             for i, point in enumerate(segment.points):
-                d[str(i)] = {'latitude' : point.latitude, 'longitude' : point.longitude}
-    print d
+                d[i] = {'Latitude' : point.latitude, 'Longitude' : point.longitude}
+    return d
 
 def csv_main(infile, logfilenum):
     data = csv.reader(open(infile))
     d = {}
     for i, (lat, lon) in enumerate(data):
-        key = ("waypoint%d" % i)
-        d[key] = {'latitude' : lat, 'longitude' : lon}
-    print d
+        d[i] = {'Latitude' : lat, 'Longitude' : lon} #key type integer
+    return d
 
 if __name__ == '__main__':
     a = ArgumentParser()
@@ -33,8 +32,9 @@ if __name__ == '__main__':
 #TODO auto filetype detection
     a.add_argument('-g', '--gpx', action = 'store_true', help='flag for gpx filetype')
     r = a.parse_args()
-    print r
+    d = {}
     if r.gpx:
-        gpx_main(r.infile, r.run_number)
+        d = gpx_main(r.infile, r.run_number)
     else:
-        csv_main(r.infile, r.run_number)
+        d = csv_main(r.infile, r.run_number)
+    data.post_request(string = 'waypoint', data = d)

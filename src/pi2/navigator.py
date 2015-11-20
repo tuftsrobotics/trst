@@ -39,23 +39,30 @@ def navigate(boat_data, waypoint):
     curr_pos = get_latlon_from_dict(boat_data)
     next_pos = get_latlon_from_dict(waypoint)
 #TODO unhardcode deviation
-    deviation = '-14.8'
+    deviation = -14.8
     true_heading = float(boat_data['Heading']) + deviation
     if true_heading > 180: #correct to range [-180,180]
         true_heading = true_heading - 360
     #PID update
     pid_nav.target = float(curr_pos.heading_initial(next_pos)) #true angle to target
-    boat_state.set_rudder_scaled_pos(pid_nav.update(heading))
+    rudder_target = pid_nav.update(true_heading)
+    boat_state.set_rudder_scaled_pos(rudder_target)
 
-    serial.write(state = boat_state)
+#    serial.write(state = boat_state)
+
+def pull_data():
+    boat_data = data.get_request('').json()
+    if boat_data == {}:
+        print "NO BOAT DATA EXITING"
+    return boat_data
 
 def main():
     #data.post_request('waypoint', initial_waypoint)
     try:
+        waypoints = data.get_request('waypoint').json()
         while 1:
-            waypoint = data.get_request('waypoint').text
-            boat_data = data.get_request('').json()
-            navigate(boat_data, waypoint)
+            boat_data = pull_data()
+            navigate(boat_data, waypoints["0"]) #note that dictionary keys are string
             time.sleep(WAIT_TIME)
     except KeyboardInterrupt:
         print "\nINTERUPT NAVIGATOR PROGRAM HALT"
@@ -71,6 +78,6 @@ if __name__ == '__main__':
     pid_nav = pid.PID()
     boat_state = BoatState()
 #serial     = SerialConnection(port = '/dev/ttyACM1')
-    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
+#    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
     main()
 
