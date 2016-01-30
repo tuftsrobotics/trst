@@ -6,7 +6,8 @@
 
 Servo sails;
 Servo rudder;
-
+int r_pos;
+int s_pos;
 int rudder_default = 1300;
 int sail_default = 1800;
 
@@ -16,7 +17,7 @@ int RC_rudder_port = 6;
 int AR_sail_port = 9;
 int AR_rudder_port = 10;
 
-int RC_pulse_timeout = 100000;
+int RC_pulse_timeout = 100;
 
 int upper_bound = 1800;
 int lower_bound = 1100;
@@ -51,14 +52,50 @@ void setup() {
   rudder.writeMicroseconds(rudder_default);
   sails.writeMicroseconds(sail_default);
   Serial.print("ready\n");
+  
 }
 
+void loop() {
+  int RC_sails = pulseIn(RC_sail_port, HIGH, RC_pulse_timeout);
+  int RC_rudder = pulseIn(RC_rudder_port, HIGH, RC_pulse_timeout);
+  RC_state = (RC_sails != 0 || RC_rudder != 0);
+  
+  if (RC_state) {
+      setSails(RC_sails);
+      setRudder(RC_rudder);
+
+      Serial.print("RC_rudder: ");
+      Serial.print(RC_rudder);
+      Serial.print("\nRC_sails: ");
+      Serial.print(RC_sails);
+      Serial.print('\n');
+    } else {
+      if (Serial.available() > 0) {
+      
+        r_pos = Serial.parseInt();
+        s_pos = Serial.parseInt();
+        setRudder(r_pos);
+        setSails(s_pos);
+        Serial.print('r');
+        Serial.print(r_pos);
+        Serial.print('s');
+        Serial.print(s_pos);
+        Serial.print('\n');
+      }
+    }
+  delay(10);
+}
+
+/*
 void loop() {
   int rudder_pos;
   int sail_pos;
   while (Serial.available() > 0 && !RC_state) {
+    Serial.println("Serial > 0, and RC_state == 1");
     rudder_pos = Serial.parseInt();
     sail_pos = Serial.parseInt();
+    Serial.println(rudder_pos);
+    Serial.println(sail_pos);
     if (Serial.read() == '\n') {
       
       setRudder(rudder_pos);
@@ -70,6 +107,7 @@ void loop() {
       Serial.print('\n');
     }
   }
+
   int RC_sails = pulseIn(RC_sail_port, HIGH, RC_pulse_timeout);
   int RC_rudder = pulseIn(RC_rudder_port, HIGH, RC_pulse_timeout);
 
@@ -89,4 +127,4 @@ void loop() {
       RC_state = false;
     }
     delay(10);
-}
+}*/
