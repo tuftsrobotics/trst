@@ -1,6 +1,14 @@
 #The purpose of this script is to filter NMEA2000 data by pgn to examine particular
 #pgn types
 
+"""
+The purpose of this script is to filter NMEA2000 data by pgn to examine particular
+pgn types
+Example:
+    python filter.py "FFFFF" data.dat
+    will find and print to stdout all the lines that contain the string FFFFF
+"""
+
 import argparse
 import subprocess
 if __name__ == '__main__':

@@ -67,6 +67,8 @@ def execute(fp, fun, filt = None, has_time = True):
     with open(fp) as f:
         for line in f:
             l = line.rstrip().split()
+            if len(l) != 2:
+                continue
             if has_time:
                 assert len(l) == 3
                 time_read, pgn, body = l
@@ -179,7 +181,7 @@ if __name__ == '__main__':
     good_pgns = p.valid_set
 #    good_pgns = set([129029])
     filt = lambda x: pgn_is_good(x, good_pgns)
-    data = execute('../data/1/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
+    data = execute('../../data/3/feed', to_can_dump, filt, has_time = False) #GNSS Position Data
     boat = Boat()
     accum = [data[1]]
     for d in data[-2000:]:          # This is very strange... but the first line is malformed
