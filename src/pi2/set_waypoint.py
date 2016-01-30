@@ -27,7 +27,7 @@ def csv_main(infile, logfilenum):
 
 if __name__ == '__main__':
     a = ArgumentParser()
-    a.add_argument('infile', help='waypoint csv file')
+    a.add_argument('infile', default='waypoints/test', help='waypoint csv file')
     a.add_argument('-t', action = 'store', dest = 'run_number', help='run number used in logging')
 #TODO auto filetype detection
     a.add_argument('-g', '--gpx', action = 'store_true', help='flag for gpx filetype')
