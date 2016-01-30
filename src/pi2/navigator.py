@@ -59,9 +59,9 @@ def pull_data():
 def main(log = False, logfilenum = None):
     if logfilenum is None:
         timesinceepoch = int(time.time())
-        f = open('log/navigator/' + str(timesinceepoch) + '.log','a')
+        f = open('log/navigator/' + str(timesinceepoch) + '.log','a+')
     else:
-        f = open('log/navigator/' + str(logfilenum) + '.log', 'a')
+        f = open('log/navigator/' + str(logfilenum) + '.log', 'a+')
     try:
         while 1:
 #TODO how often do we pull waypoints?
