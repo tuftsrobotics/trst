@@ -119,9 +119,9 @@ def main(track_time = False, ser = '/dev/ttyACM0', log = True, logfilenum = None
     ser = serial.Serial(ser, 115200)
     if logfilenum is None:
         timesinceepoch = int(time.time())
-        f = open('log/uploader/' + str(timesinceepoch) + '.log','a')
+        f = open('log/uploader/' + str(timesinceepoch) + '.log','a+')
     else:
-        f = open('log/uploader/' + str(logfilenum) + '.log', 'a')
+        f = open('log/uploader/' + str(logfilenum) + '.log', 'a+')
 
     try:
         boat = Boat()
