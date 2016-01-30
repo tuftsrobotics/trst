@@ -5,13 +5,27 @@ Intended for manual testing of the control system. Simple connection to an ardui
 connected via tty port, and simple controls for setting the servos at specified
 locations
 """
+from argparse import ArgumentParser
+
+from pyserial_driver import *
+from boatstate import BoatState
+
+def transmit_serial(state, connection):
+    """ transmits boat state over a connection object
+
+    calls connection.write(state) to write the state over some connection
+
+    """
+    connection.write(state)
 
 
 def main(port, log, logfilenum):
-    intro = "This program allows you to control a sailboat over serial.
-             Default values for servos are around 1400 and range from around
-             1100 to 1800 although this varies by model. Be careful with values
-             outside this range (although they are allowed for testing purposes"
+    intro = """
+            This program allows you to control a sailboat over serial.
+            Default values for servos are around 1400 and range from around
+            1100 to 1800 although this varies by model. Be careful with values
+            outside this range (although they are allowed for testing purposes
+            """
     print intro
     state = BoatState()
     connection = SerialConnection(port = port)
@@ -21,7 +35,7 @@ def main(port, log, logfilenum):
             sails  = int(input("Enter sails position: "))
             state.set_pos((rudder, sails))
             transmit_serial(state, connection)
-            print "sent!"
+            print state
     except KeyboardInterrupt:
         print "\nINTERUPT PROGRAM HALT"
 
