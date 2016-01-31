@@ -1,0 +1,8 @@
+nose
+sphinx
+gpxpy
+pyserial
+Flask
+requests
+
+
