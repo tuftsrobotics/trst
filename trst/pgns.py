@@ -17,6 +17,8 @@ class Pgns:
                 self.valid_set |= set([int(i, base = 16) for i in valid])
 
     def is_valid_pgn(self, pgn):
+        if type(pgn) == int:
+            return pgn in self.valid_set
         return int(pgn, base = 16) in self.valid_set
 
     def get_filter_func(self):

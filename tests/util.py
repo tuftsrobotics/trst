@@ -1,5 +1,9 @@
 
 import os
+def _excstr(exc):
+    if type(exc) is tuple:
+        return str(tuple(map(_excstr, exc)))
+    return exc.__name__
 
 def raises(exc, func, *args, **kwds):
     """Raise AssertionError if ``func(*args, **kwds)`` does not raise *exc*.
