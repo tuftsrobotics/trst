@@ -8,13 +8,21 @@ class Pgns:
         Args:
             fp (file): string pointing to valid_pgn file 
         """
+        self.valid_set = set()
         if fp is None:
             fp = "valid_pgns"
         with open(fp) as f:
-            valid = next(f)
-        valid = valid.rstrip().split()
-        valid = set([int(i, base = 16) for i in valid])
-        self.valid_set = valid
+            for line in f:
+                valid = line.rstrip().split()
+                self.valid_set |= set([int(i, base = 16) for i in valid])
+
+    def is_valid_pgn(self, pgn):
+        if type(pgn) == int:
+            return pgn in self.valid_set
+        return int(pgn, base = 16) in self.valid_set
+
+    def get_filter_func(self):
+        return lambda pgn: self.is_valid_pgn(pgn)
 
     def __repr__(self):
         return self.valid_set.__repr__()

@@ -46,7 +46,8 @@ read -p "Start uploader [Y/N]? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    python uploader.py -t $i -p $sensor_port
+    python old_uploader.py -t $i -p $sensor_port
+    #this should be python decoder.py | analyzer -json | python uploader.py
 fi
 
 ### START NAVIGATOR ###
