@@ -2,8 +2,8 @@ import sys
 from pgns import Pgns
 import time
 import subprocess
-from signal import signal, SIGPIPE, SIG_DFL
-signal(SIGPIPE,SIG_DFL) 
+#from signal import signal, SIGPIPE, SIG_DFL
+#signal(SIGPIPE,SIG_DFL) 
 
 def analyze(lines, boat = None):
     """ takes a line and pushes the data to boatd"""
