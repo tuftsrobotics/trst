@@ -1,6 +1,23 @@
 import sys
 from pgns import Pgns
 import time
+import subprocess
+from signal import signal, SIGPIPE, SIG_DFL
+signal(SIGPIPE,SIG_DFL) 
+
+def analyze(lines, boat = None):
+    """ takes a line and pushes the data to boatd"""
+    s = ''
+    print lines
+#TODO this opens a new analyzer process for every line, very slow... please fix me
+    proc = subprocess.Popen(['analyzer', '-json'],
+                            stdin = subprocess.PIPE,
+                            stdout = subprocess.PIPE)
+#    stdout_val, stderr_val = proc.communicate(s)
+    proc.stdin.write(s)
+    for line in proc.stdout:
+        print line
+    proc.stdin.close()
 
 class Error(Exception):
     """Base class for exceptions in this module."""
@@ -95,37 +112,44 @@ class Decoder(object):
 
     def run(self):
         accum = Accumulator()
+        count = 0
         for line in self.inf:
+            if count < 100:
+                count += 1
+                continue
             if self.skip_malformed and not is_well_formatted(line):
                 continue
-#            if not self.filter_func(parse_line(line)[0]):
-#                continue
+            if not self.filter_func(parse_line(line)[0]):
+                continue
             out = accum.update(line)
-            if out is not None:
-                print to_can_analyzer_multi(out)
+            if out is not None and out != []:
+                sys.stdout.write( to_can_analyzer_multi(out))
+#                analyze(to_can_analyzer_multi(out))
             time.sleep(self.sleep_time)
-
-class Serial_Decoder(object):
-    """ Initializes a serial connection and waits for valid NMEA 2000 input
-    """
-    def __init__(self, port = '/dev/ttyACM0', baud = 115200):
-        self.serial = serial.Serial(port, baud)
-
-    def run(self):
-        accum = Accumulator()
-        try:
-            while True:
-                line = ser.readline()
-                if self.skip_malformed and not is_well_formatted(line):
-                    continue
-                out = accum.update(line)
-                if out is not None:
-                    print to_can_analyzer_multi(out)
-        except KeyboardInterrupt:
-            print "\nINTERUPT PROGRAM HALT"
+#
+#class Serial_Decoder(object):
+#    """ Initializes a serial connection and waits for valid NMEA 2000 input
+#    """
+#    def __init__(self, port = '/dev/ttyACM0', baud = 115200):
+#        self.serial = serial.Serial(port, baud)
+#
+#    def run(self):
+#        accum = Accumulator()
+#        try:
+#            while True:
+#                line = ser.readline()
+#                if self.skip_malformed and not is_well_formatted(line):
+#                    continue
+#                out = accum.update(line)
+#                if out is not None and out is not []:
+##                    sys.stdout.write( to_can_analyzer_multi(out))
+#                    analyze(out)
+#        except KeyboardInterrupt:
+#            print "\nINTERUPT PROGRAM HALT"
 
 
 if __name__ =='__main__':
-    d = Decoder(fp = '../data/0/feed', sleep_time = 0.01)
+    print Pgns()
+    d = Decoder(fp = '../data/1/feed', sleep_time = 0.0)
     d.run()
 

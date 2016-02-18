@@ -4,6 +4,8 @@ import sys
 import json
 import requests
 from pgns import Pgns
+#from signal import signal, SIGPIPE, SIG_DFL
+#signal(SIGPIPE,SIG_DFL) 
 
 def open_log_file(run_number = 0):
     f = open('log/uploader/' + str(logfilenum) + '.log', 'a+')
@@ -15,6 +17,7 @@ class Boat(object):
 
     def post(self, data):
         """THIS WAS CHANGED FOR FLASK SERVER TRANSITION """
+#        print "posting", data
         requests.post(self.url, json = data)
 #        requests.post(self.url, data = data)
 
@@ -24,6 +27,7 @@ class Boat(object):
 def main(log = None):
     boat = Boat()
     for line in sys.stdin:
+        print "uploading", line
         try:
             data = json.loads(line)
             try:
@@ -41,7 +45,7 @@ def main(log = None):
             except KeyError:
                 print "Key ERROR:", data
         except ValueError:
-            print "Value ERROR:", json_val
+            print "Value ERROR:", line
 
 if __name__ == '__main__':
 #PARSE
@@ -53,3 +57,4 @@ if __name__ == '__main__':
     log = (r.run_number is not None)
     #pgn_filter = Pgns(pgn_fp).get_filter_func()
     main(log = log)
+
