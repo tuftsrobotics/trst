@@ -6,7 +6,41 @@ import requests
 import json
 from argparse import ArgumentParser
 
-def analyze(lines, boat = None):
+#def analyze(lines, boat = None):
+#    """ takes a line and pushes the data to boatd"""
+#    if boat is None:
+#        print "HALP no boat"
+#    s = ''
+#    for l in lines:
+#        s += line_to_csv(l)
+##TODO this opens a new analyzer process for every line, very slow... please fix me
+#    proc = subprocess.Popen(['analyzer', '-json'],
+#                            stdin = subprocess.PIPE,
+#                            stdout = subprocess.PIPE,
+#                            stderr = subprocess.PIPE)
+#    stdout_val, stderr_val = proc.communicate(s)
+#    json_val = stdout_val
+#    try:
+#        data = json.loads(json_val)
+#        try:
+#            fields = data["fields"]
+#            if data["description"] == "Wind Data":
+#                ref = fields["Reference"]
+#                if ref == "Apparent":
+#                    fields["App Wind Angle"] = fields.pop("Wind Angle")
+#                    fields["App Wind Speed"] = fields.pop("Wind Speed")
+#                if ref == "True (ground referenced to North)":
+#                    fields["True Wind Angle"] = fields.pop("Wind Angle")
+#                    fields["True Wind Speed"] = fields.pop("Wind Speed")
+#            boat.post(fields)
+#            return fields
+#        except KeyError:
+#            print "Key ERROR:", data
+#    except ValueError:
+#        print "Value ERROR:", json_val
+
+def analyze(analyzer_proc, lines, boat = None):
+    p = analyzer_proc
     """ takes a line and pushes the data to boatd"""
     if boat is None:
         print "HALP no boat"
@@ -14,10 +48,7 @@ def analyze(lines, boat = None):
     for l in lines:
         s += line_to_csv(l)
 #TODO this opens a new analyzer process for every line, very slow... please fix me
-    proc = subprocess.Popen(['analyzer', '-json'],
-                            stdin = subprocess.PIPE,
-                            stdout = subprocess.PIPE,
-                            stderr = subprocess.PIPE)
+    
     stdout_val, stderr_val = proc.communicate(s)
     json_val = stdout_val
     try:
@@ -38,7 +69,6 @@ def analyze(lines, boat = None):
             print "Key ERROR:", data
     except ValueError:
         print "Value ERROR:", json_val
-
 class Boat(object):
     def __init__(self):
         self.url = "http://127.0.0.1:8888/"
@@ -115,6 +145,10 @@ def main_past():
             accum = [d]
 
 def main(track_time = False, ser = '/dev/ttyACM0', log = True, logfilenum = None):
+    proc = subprocess.Popen(['analyzer', '-json'],
+                            stdin = subprocess.PIPE,
+                            stdout = subprocess.PIPE,
+                            stderr = subprocess.PIPE)
     ser = serial.Serial(ser, 115200)
     if logfilenum is None:
         timesinceepoch = int(time.time())
@@ -144,7 +178,7 @@ def main(track_time = False, ser = '/dev/ttyACM0', log = True, logfilenum = None
             if d[2] == accum[-1][2]: #if same pgn
                 accum.append(d)
             else:
-                analyzed = analyze(accum, boat) # analyze pgn return json
+                analyzed = analyze(proc, accum, boat) # analyze pgn return json
                 if log:
                     print >> f, analyzed
                 accum = [d]
