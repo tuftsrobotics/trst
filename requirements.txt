@@ -6,3 +6,5 @@ nose
 pyserial
 requests
 sphinx
+rxpy
+pytest

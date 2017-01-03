@@ -16,7 +16,7 @@ def get_request(string = ''):
         return -1
     assert r.status_code == 200
     return r
-    
+
 def post_request(string = '', data = ''):
     r = requests.post(server + string, json = data)
     #r = requests.post(server + string, data = data) #changed for flask server

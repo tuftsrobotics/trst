@@ -36,7 +36,7 @@ void setRudder(int pos) {
 
 void setSails(int pos) {
   if (pos >= lower_bound && pos <= upper_bound) {
-    sails.writeMicroseconds(pos);    
+    sails.writeMicroseconds(pos);
   } else {
     Serial.print("error: Sails out of bounds!\n");
   }
@@ -52,14 +52,14 @@ void setup() {
   rudder.writeMicroseconds(rudder_default);
   sails.writeMicroseconds(sail_default);
   Serial.print("ready\n");
-  
+
 }
 
 void loop() {
   int RC_sails = pulseIn(RC_sail_port, HIGH, RC_pulse_timeout);
   int RC_rudder = pulseIn(RC_rudder_port, HIGH, RC_pulse_timeout);
   RC_state = (RC_sails != 0 || RC_rudder != 0);
-  
+
   if (RC_state) {
       setSails(RC_sails);
       setRudder(RC_rudder);
@@ -71,7 +71,7 @@ void loop() {
       Serial.print('\n');
     } else {
       if (Serial.available() > 0) {
-      
+
         r_pos = Serial.parseInt();
         s_pos = Serial.parseInt();
         setRudder(r_pos);
@@ -97,7 +97,7 @@ void loop() {
     Serial.println(rudder_pos);
     Serial.println(sail_pos);
     if (Serial.read() == '\n') {
-      
+
       setRudder(rudder_pos);
       setSails(sail_pos);
       Serial.print('r');
@@ -114,7 +114,7 @@ void loop() {
   if (RC_sails != 0 || RC_rudder != 0) {
       // RC override
       RC_state = true;
-      
+
       setSails(RC_sails);
       setRudder(RC_rudder);
 

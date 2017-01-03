@@ -1,4 +1,3 @@
-
 import os
 def _excstr(exc):
     if type(exc) is tuple:
@@ -8,8 +7,6 @@ def _excstr(exc):
 def raises(exc, func, *args, **kwds):
     """Raise AssertionError if ``func(*args, **kwds)`` does not raise *exc*.
     FROM SPHINX PROJECT"""
-
-
     try:
         func(*args, **kwds)
     except exc:

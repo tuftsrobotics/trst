@@ -5,3 +5,4 @@ boatd/
 AIRMAR_PGNs.pdf
 server/node_modules/
 docs/_build/*
+cache/

@@ -3,9 +3,9 @@ from argparse import ArgumentParser
 import sys
 import json
 import requests
-from pgns import Pgns
+from  trst.pgns.pgns import Pgns
 #from signal import signal, SIGPIPE, SIG_DFL
-#signal(SIGPIPE,SIG_DFL) 
+#signal(SIGPIPE,SIG_DFL)
 
 def open_log_file(run_number = 0):
     f = open('log/uploader/' + str(logfilenum) + '.log', 'a+')
@@ -57,4 +57,3 @@ if __name__ == '__main__':
     log = (r.run_number is not None)
     #pgn_filter = Pgns(pgn_fp).get_filter_func()
     main(log = log)
-

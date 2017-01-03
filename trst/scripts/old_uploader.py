@@ -1,5 +1,5 @@
 import time
-from pgns import Pgns
+from trst.pgns.pgns import Pgns
 import serial
 import subprocess
 import requests
@@ -48,7 +48,7 @@ def analyze(analyzer_proc, lines, boat = None):
     for l in lines:
         s += line_to_csv(l)
 #TODO this opens a new analyzer process for every line, very slow... please fix me
-    
+
     stdout_val, stderr_val = proc.communicate(s)
     json_val = stdout_val
     try:
@@ -196,4 +196,3 @@ if __name__ == '__main__':
     log = (r.run_number is not None)
     filt = get_filt()
     main(ser = r.port, log = log, logfilenum = r.run_number)
-

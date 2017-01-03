@@ -18,8 +18,8 @@ from LatLon import LatLon, Latitude, Longitude
 import data
 import pid
 import time
-from boatstate import BoatState
-from pyserial_driver import SerialConnection
+from trst.navigation.boatstate import BoatState
+from trst.serial.pyserial_driver import SerialConnection
 from argparse import ArgumentParser
 
 def get_vect_to_wp(p):
@@ -85,4 +85,3 @@ if __name__ == '__main__':
 #serial     = SerialConnection(port = '/dev/ttyACM1')
 #    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
     main(log = log, logfilenum = run_number)
-

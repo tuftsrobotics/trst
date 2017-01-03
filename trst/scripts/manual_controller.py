@@ -7,8 +7,8 @@ locations
 """
 from argparse import ArgumentParser
 
-from pyserial_driver import *
-from boatstate import BoatState
+from trst.serial.pyserial_driver import *
+from trst.navigation.boatstate import BoatState
 
 def transmit_serial(state, connection):
     """ transmits boat state over a connection object

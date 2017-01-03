@@ -5,9 +5,10 @@ feeds NMEA 2000 data slowly to analyzer
 
 import sys
 import os
+import pytest
 
-from trst.decoder import Decoder, MalformedLineError, parse_line
-from tests.util import raises, get_sample_fp
+from trst.decoders.decoder import Decoder, MalformedLineError, parse_line
+from trst.utils.test_utils import raises, get_sample_fp
 
 def test_open_file():
     d = Decoder(get_sample_fp('feed1'))
