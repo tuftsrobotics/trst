@@ -8,7 +8,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-class server(object):
+class Server(object):
     data = {}
     waypoints = {}
 
@@ -25,6 +25,5 @@ class server(object):
         return jsonify(server.waypoints)
 
 if __name__ == "__main__":
-    s = server()
+    s = Server()
     app.run(host = '0.0.0.0', port = 8888)
-

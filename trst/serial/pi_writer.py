@@ -11,23 +11,23 @@ Note:
 
 """
 
-from pyserial_driver import *
-from boatstate import BoatState
+from trst.serial.pyserial_driver import *
+from trst.navigation.boatstate import BoatState
 
 def control(key, state):
     """ controls the servo positions given a keyboard input
-    Takes wasd input from the keyboard and uses it to control two servos. 
+    Takes wasd input from the keyboard and uses it to control two servos.
     The rudder servo is controlled by ad, sails by ws
 
     Args:
         key (str): key entered on stdin
         state: boatstate of t-1 timestep
-    
+
     Returns:
         updated boatstate
     """
     INCREMENT = 100
-    
+
     if key == 'a':
         state.turn_left()
     elif key == 'd':
@@ -62,4 +62,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

@@ -1,6 +1,6 @@
 
-from trst.pgns import Pgns
-from tests.util import raises, get_sample_fp
+from trst.pgns.pgns import Pgns
+from trst.utils.test_utils import raises, get_sample_fp
 
 def get_pgns_instance(fp):
     return Pgns(get_sample_fp(fp))
@@ -31,7 +31,7 @@ def test_is_valid_func():
     raises(ValueError, func, 'helloworld')
     raises(ValueError, func, '')
     raises(TypeError, func, 0x1F119)
-    assert not func('0') 
+    assert not func('0')
     assert func('1F119')
 
 def test_get_filter_func():
@@ -41,6 +41,5 @@ def test_get_filter_func():
     raises(ValueError, func, 'helloworld')
     raises(ValueError, func, '')
     raises(TypeError, func, 0x1F119)
-    assert not func('0') 
+    assert not func('0')
     assert func('1F119')
-

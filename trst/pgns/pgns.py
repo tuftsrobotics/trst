@@ -1,16 +1,18 @@
-class Pgns:
+import os
+
+class Pgns(object):
     def __init__(self, fp = None):
         """reads a valid pgn file and returns a set of valid pgn ints
 
         a valid fp will be a space separated file with a single line containing
-        all valid pgns all other pgns will be ignored 
+        all valid pgns all other pgns will be ignored
 
         Args:
-            fp (file): string pointing to valid_pgn file 
+            fp (file): string pointing to valid_pgn file
         """
         self.valid_set = set()
         if fp is None:
-            fp = "valid_pgns"
+            fp = os.path.join(os.path.dirname(__file__), 'valid_pgns')
         with open(fp) as f:
             for line in f:
                 valid = line.rstrip().split()

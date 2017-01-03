@@ -8,8 +8,8 @@ it also defines that format
 """
 
 import serial
-from boatstate import BoatState
 import time
+from trst.navigation.boatstate import BoatState
 
 DEBUG = False
 
@@ -18,7 +18,7 @@ def format_to_arduino(state):
 
     Each serial line has the format:
         [rudder_pos],[sails_pos]
-    
+
     Each position being an integer number of miliseconds in PWM format.
     """
     rudder, sails = state.get_pos()
@@ -28,7 +28,7 @@ class SerialConnection(object):
     """ Serial Connection object used to connect to arduino over usb serial
 
     Serial connection has a number of option, logging will log all messages sent
-    over serial to the arduino, very useful for debugging. Log files will either 
+    over serial to the arduino, very useful for debugging. Log files will either
     be time stamped or numbered ordinally.
 
     """
@@ -52,4 +52,3 @@ class SerialConnection(object):
         self.ser.write(string)
         if self.log:
             print >> self.log_file, string
-

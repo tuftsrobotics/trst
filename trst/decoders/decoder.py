@@ -1,9 +1,9 @@
 import sys
-from pgns import Pgns
+from trst.pgns.pgns import Pgns
 import time
 import subprocess
 #from signal import signal, SIGPIPE, SIG_DFL
-#signal(SIGPIPE,SIG_DFL) 
+#signal(SIGPIPE,SIG_DFL)
 
 def analyze(lines, boat = None):
     """ takes a line and pushes the data to boatd"""
@@ -38,7 +38,7 @@ def is_well_formatted(line):
         return True
     except MalformedLineError:
         return False
-        
+
 
 def list_to_csv(l):
     """Python list to csv string"""
@@ -104,9 +104,12 @@ def to_can_analyzer_format(line):
     return list_to_csv(line)
 
 class Decoder(object):
-    def __init__(self, fp = None, sleep_time = 0, skip_malformed = True):
+    def __init__(self, fp=None, sleep_time=0, skip_malformed=True):
         self.filter_func = Pgns().get_filter_func()
-        self.inf = open(fp)
+        if fp is None:
+            self.inf = sys.stdin
+        else:
+            self.inf = open(fp)
         self.sleep_time = sleep_time
         self.skip_malformed = skip_malformed
 
@@ -152,4 +155,3 @@ if __name__ =='__main__':
     print Pgns()
     d = Decoder(fp = '../data/1/feed', sleep_time = 0.0)
     d.run()
-

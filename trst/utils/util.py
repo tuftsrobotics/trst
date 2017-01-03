@@ -1,8 +1,3 @@
-
-
-
-
-
 def get_filt():
     """ uses the files pgn.py and valid_pgns to get the set of pgns we track"""
     p = Pgns()

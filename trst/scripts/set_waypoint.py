@@ -5,7 +5,8 @@ where each line represents a waypoint
 """
 from argparse import ArgumentParser
 import csv
-import data
+import trst.server
+import trst.server.data
 import gpxpy
 
 def gpx_main(infile, logfilenum):
