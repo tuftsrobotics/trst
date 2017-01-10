@@ -1,0 +1,59 @@
+Tufts Robotic Sailing Information Sheet—Sailbot Competition
+
+Boat Specifications:
+•	Length: max 2 m (sensors not included)
+•	Beam: max 3 m with zero heel
+•	Draft: max 1.5 m in normal sailing coniditions
+•	Height: max 5 m (sensors not included)
+
+Other Rules:
+•	Need a stand to support the boat
+•	No direct human contact
+•	Need full remote radio at all times during competition to avoid collisions
+•	Data transfer to shore is unlimited, must be at an approved frequency
+•	Any material can be used
+•	Bilge pumps are permitted
+•	Sail configuration changes can occur during the race but only by an onboard system
+
+Competitions:
+•	Fleet race:
+o	Group of boats sail between two buoys and around two other bouys
+o	Use remote control for steering and autonomous sails
+o	Fastest boat gets 10 points
+ 
+•	Station Keeping
+o	Boat autonomously stays in 40x40 m box for 5 minutes
+o	Exits within 30 seconds
+o	Can leave and return the box but there are point deductions
+ 
+•	Precision Navigation
+o	Autonomously sail around 2 buoys, start and end through a start/finish line
+ 
+•	Payload
+o	Start between two buoys, sail around a buoy ad back
+o	Remote or autonomous
+o	Boat carries cargo, scoring is based on the percentage of the boat’s empty weight that the cargo represents
+ 
+•	Collision Avoidance
+o	Start between 2 buoys, round a buoy and return
+o	Sail autonomously on a reach
+o	Must avoid a collision
+ 
+•	Search
+o	Small buoy placed within 100 m of starting position
+o	Boat locates and touches buoy within 5 mins
+o	Boat must indicate it found the buoy with flashing white strobe light or signal to shore station
+ 
+•	Long Distance Race
+o	Sail around 4 buoys for up to 8 hours
+o	1 pt for each lap
+o	Must be within 10 m of each buoy
+o	Remote control is allowed but there is 50 percent deduction
+o	Additional pt for each extra hour sailed with no pitstop
+ 
+•	Presentation
+o	Topics: workmanship, innovation, control theory, boat design, student involvement
+o	Each team presents to panel of experts in area of control theory, systems engineering, and naval architecture
+o	20 minute presentation, 10 minute Q&A
+
+
