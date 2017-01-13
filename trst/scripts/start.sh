@@ -55,5 +55,5 @@ read -p "Start navigator [Y/N]? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    python navigator.py -t $i -p $nav_port
+    python navigate.py -t $i -p $nav_port
 fi

@@ -8,80 +8,44 @@ This module is a navigator given a series of waypoints on a server
 
 """
 
-
-WAIT_TIME = 0.5
-
 #initial_waypoint = {'Latitude': 42.432136, 'Longitude': -71.147794}
 # about 100 meters off the dock
 
+import abc
 from LatLon import LatLon, Latitude, Longitude
-import data
-import pid
-import time
-from trst.navigation.boatstate import BoatState
-from trst.serial.pyserial_driver import SerialConnection
 from argparse import ArgumentParser
+from trst.navigation.boatstate import BoatState
 
-def get_vect_to_wp(p):
-    c = data.request()
 
-def get_vect(p1, p2):
-    """returns heading and magnitude between two latlon objects """
-    assert type(p1) == type(LatLon)
-    assert type(p2) == type(LatLon)
-    return p2 - p1
+class Navigator(object):
+    """
+    Base class for navigators. Implements some navigation method and then
+    update the boat state with the update_boat function
+    """
+    __metaclass__ = abc.ABCMeta
 
-def get_latlon_from_dict(d):
-    assert 'Latitude' in d and 'Longitude' in d
-    return LatLon(d['Latitude'], d['Longitude'])
+    def __init__(self):
+        self.boat_state = BoatState()
 
-def navigate(boat_data, waypoint):
-    curr_pos = get_latlon_from_dict(boat_data)
-    next_pos = get_latlon_from_dict(waypoint)
-#TODO unhardcode deviation
-    deviation = -14.8
-    true_heading = float(boat_data['Heading']) + deviation
-    if true_heading > 180: #correct to range [-180,180]
-        true_heading = true_heading - 360
-    #PID update
-    pid_nav.target = float(curr_pos.heading_initial(next_pos)) #true angle to target
-    rudder_target = pid_nav.update(true_heading)
-    boat_state.set_rudder_scaled_pos(rudder_target)
+    @staticmethod
+    def get_vect_to_wp(p):
+        c = data.request()
 
-#    serial.write(state = boat_state)
+    @staticmethod
+    def get_vect(p1, p2):
+        """returns heading and magnitude between two latlon objects """
+        assert type(p1) == type(LatLon)
+        assert type(p2) == type(LatLon)
+        return p2 - p1
 
-def pull_data():
-    boat_data = data.get_request('').json()
-    if boat_data == {}:
-        print "NO BOAT DATA EXITING"
-    return boat_data
+    @staticmethod
+    def get_latlon_from_dict(d):
+        assert 'Latitude' in d and 'Longitude' in d
+        return LatLon(d['Latitude'], d['Longitude'])
 
-def main(log = False, logfilenum = None):
-    if logfilenum is None:
-        timesinceepoch = int(time.time())
-        f = open('log/navigator/' + str(timesinceepoch) + '.log','a+')
-    else:
-        f = open('log/navigator/' + str(logfilenum) + '.log', 'a+')
-    try:
-        while 1:
-#TODO how often do we pull waypoints?
-            waypoints = data.get_request('waypoint').json()
-            boat_data = pull_data()
-            next_waypoint = waypoints["0"]
-            navigate(boat_data, next_waypoint) #note that dictionary keys are string
-            time.sleep(WAIT_TIME)
-    except KeyboardInterrupt:
-        print "\nINTERUPT NAVIGATOR PROGRAM HALT"
+    @abc.abstractmethod
+    def navigate(self, boat_data, waypoint):
+        pass
 
-if __name__ == '__main__':
-#PARSE
-    argparser = ArgumentParser()
-    argparser.add_argument('-t', action = 'store', dest = 'run_number', help='run number used in logging')
-    argparser.add_argument('-port', action = 'store', dest = 'port', default = '/dev/ttyACM1', help='port for navigator arduino')
-    r = argparser.parse_args()
-    log = (r.run_number is not None)
-    pid_nav = pid.PID()
-    boat_state = BoatState()
-#serial     = SerialConnection(port = '/dev/ttyACM1')
-#    serial     = SerialConnection(port = r.port, log=log, logfilenum = r.run_number)
-    main(log = log, logfilenum = run_number)
+    def update_boat(self, rudder_target):
+        self.boat_state.set_rudder_scaled_pos(rudder_target)
