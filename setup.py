@@ -14,6 +14,7 @@ setup(
     author='Alexander Tong',
     author_email='alexanderytong@gmail.com',
     url='https://github.com/tuftsrobotics/trst',
+    scripts=['bin/trst'],
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )

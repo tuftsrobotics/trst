@@ -24,6 +24,10 @@ class Server(object):
             server.waypoints.update(request.json)
         return jsonify(server.waypoints)
 
-if __name__ == "__main__":
-    s = Server()
+server = Server()
+
+def run():
     app.run(host = '0.0.0.0', port = 8888)
+
+if __name__ == "__main__":
+    run()
